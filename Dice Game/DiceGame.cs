@@ -60,6 +60,28 @@ namespace DiceGame
                         player2 = "TestPlayer2";
                     }
                 });
+
+                Console.WriteLine();
+                while (score1 < goal && score2 < goal)
+                {
+                    // Player 1 turn:
+                    tryCatchFinally(() =>
+                    {
+                        Console.Write($"{player1}'s turn! Press Enter to roll the die: ");
+                        Console.ReadLine();
+                        if (player1.ToLower() == "test")
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            throw new ArgumentException("Test Activated ✅");
+                        }
+
+                        var roll1 = random.Next(1, 7);
+                        Console.WriteLine($"{player1} rolls the die! (rolled: {roll1})");
+
+                        score1 += roll1;
+                        Console.WriteLine($"Score: {score1} ");
+                    });
+                }
             }
         }
         private static void tryCatchFinally(Action action)
