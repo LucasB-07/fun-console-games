@@ -50,7 +50,7 @@ namespace DiceGame
                 });
                 tryCatchFinally(() =>
                 {
-                    Console.WriteLine("Player 2 name: ");
+                    Console.Write("Player 2 name: ");
                     player2 = Console.ReadLine();
                     if (player2.ToLower() == "test")
                     {
@@ -130,7 +130,7 @@ namespace DiceGame
                 // Play Agian?:
                 while (true)
                 {
-                    Console.WriteLine("Do you want to play again? (yes/no): ");
+                    Console.Write("Do you want to play again? (yes/no): ");
                     var answer = Console.ReadLine().ToLower();
 
                     if (answer == "yes")
