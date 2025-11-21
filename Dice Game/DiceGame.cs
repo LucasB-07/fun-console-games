@@ -72,7 +72,7 @@ namespace DiceGame
                         if (player1.ToLower() == "test")
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            throw new ArgumentException("Test Activated ✅");
+                            throw new ArgumentException($"Test Activated, for {player1} ✅");
                         }
 
                         var roll1 = random.Next(1, 7);
@@ -80,6 +80,23 @@ namespace DiceGame
 
                         score1 += roll1;
                         Console.WriteLine($"Score: {score1} ");
+                    });
+                    // Player 2 turn:
+                    tryCatchFinally(() =>
+                    {
+                        Console.Write($"{player2}'s turn! Press Enter to roll the die: ");
+                        Console.ReadLine();
+                        if (player1.ToLower() == "test")
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            throw new ArgumentException($"Test Activated, for {player2} ✅");
+                        }
+
+                        var roll2 = random.Next(1, 7);
+                        Console.WriteLine($"{player2} rolls the die! (rolled: {roll2})");
+
+                        score2 += roll2;
+                        Console.WriteLine($"Score: {score2} ");
                     });
                 }
             }
