@@ -126,6 +126,29 @@ namespace DiceGame
 
                 Console.WriteLine($"🏆 The winner is: {winner}, congrats! ");
                 Console.WriteLine("═══════════════════════════════");
+
+                // Play Agian?:
+                while (true)
+                {
+                    Console.WriteLine("Do you want to play again? (yes/no): ");
+                    var answer = Console.ReadLine().ToLower();
+
+                    if (answer == "yes")
+                    {
+                        break;
+                    }
+                    else if (answer == "no")
+                    {
+                        playAgain = false;
+                        break;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid input! Please type 'yes' or 'no'. ");
+                        Console.ResetColor();
+                    }
+                }
             }
         }
         private static void tryCatchFinally(Action action)
