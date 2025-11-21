@@ -107,6 +107,25 @@ namespace DiceGame
                 Console.WriteLine($"{player1}: {score1} points. ");
                 Console.WriteLine($"{player2}: {score2} points. ");
                 Console.WriteLine("═══════════════════════════════");
+
+                // Determine Winner:
+                string winner;
+                if (score1 >= goal)
+                {
+                    winner = player1;
+                }
+                else if (score2 >= goal)
+                {
+                    winner = player2;
+                }
+                else
+                {
+                    winner = null;
+                    Console.WriteLine("Unknown winner");
+                }
+
+                Console.WriteLine($"🏆 The winner is: {winner}, congrats! ");
+                Console.WriteLine("═══════════════════════════════");
             }
         }
         private static void tryCatchFinally(Action action)
