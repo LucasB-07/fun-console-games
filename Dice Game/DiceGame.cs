@@ -150,6 +150,9 @@ namespace DiceGame
                     }
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine("Thanks for playing the Dice Game Game!");
+            Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️");
         }
         private static void tryCatchFinally(Action action)
         {
