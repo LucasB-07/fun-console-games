@@ -19,7 +19,7 @@ namespace DiceGame
             Thread.Sleep(1000);
             Console.WriteLine("You play with a die, and have to keep rolling until you reach 30.");
             Thread.Sleep(1000);
-            Console.WriteLine("The one who scores more than 30 points wins the game! Good luck and hav fun. \n");
+            Console.WriteLine("The one who scores more than 30 points wins the game! Good luck and have fun. \n");
             Thread.Sleep(1000);
             Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - >");
             Thread.Sleep(1000);
@@ -64,70 +64,104 @@ namespace DiceGame
                 Console.WriteLine();
                 while (score1 < goal && score2 < goal)
                 {
-                    // Player 1 turn:
-                    tryCatchFinally(() =>
+                    //Player 1 turn:
+                    while (true)
                     {
-                        Console.Write($"{player1}'s turn! Press Enter to roll the die: ");
-                        Console.ReadLine();
-                        if (player1.ToLower() == "test")
+                        var turnFinished = false;
+                        tryCatchFinally(() =>
                         {
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            throw new ArgumentException($"Test Activated, for {player1} ✅");
+                            Console.Write($"{player1}'s turn! Press Enter to roll the die: ");
+                            string input = Console.ReadLine();
+
+                            if (input.ToLower() == "test")
+                            {
+                                throw new ArgumentException($"Test Activated, for {player1} ✅");
+                            }
+                            else if (input == "")
+                            {
+                                var roll1 = random.Next(1, 7);
+                                Console.WriteLine($"{player1} rolls the die! (rolled: {roll1})");
+
+                                score1 += roll1;
+                                Console.WriteLine($"Score: {score1} ");
+                                turnFinished = true;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Invalid input! Please press Enter: ");
+                                Console.ResetColor();
+                            }
+                        });
+                        if (turnFinished)
+                        {
+                            break;
                         }
-
-                        var roll1 = random.Next(1, 7);
-                        Console.WriteLine($"{player1} rolls the die! (rolled: {roll1})");
-
-                        score1 += roll1;
-                        Console.WriteLine($"Score: {score1} ");
-                    });
+                    }
                     // Player 2 turn:
-                    tryCatchFinally(() =>
+                    while (true)
                     {
-                        Console.Write($"{player2}'s turn! Press Enter to roll the die: ");
-                        Console.ReadLine();
-                        if (player1.ToLower() == "test")
+                        var turnFinished = false;
+                        tryCatchFinally(() =>
                         {
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            throw new ArgumentException($"Test Activated, for {player2} ✅");
+                            Console.Write($"{player2}'s turn! Press Enter to roll the die: ");
+                            string input = Console.ReadLine();
+
+                            if (input.ToLower() == "test")
+                            {
+                                throw new ArgumentException($"Test Activated, for {player2} ✅");
+                            }
+                            else if (input == "")
+                            {
+                                var roll2 = random.Next(1, 7);
+                                Console.WriteLine($"{player2} rolls the die! (rolled: {roll2})");
+
+                                score2 += roll2;
+                                Console.WriteLine($"Score: {score2} ");
+                                turnFinished = true;
+                            }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Invalid input! Please press Enter: ");
+                                Console.ResetColor();
+                            }
+                        });
+                        if (turnFinished)
+                        {
+                            break;
                         }
-
-                        var roll2 = random.Next(1, 7);
-                        Console.WriteLine($"{player2} rolls the die! (rolled: {roll2})");
-
-                        score2 += roll2;
-                        Console.WriteLine($"Score: {score2} ");
-                    });
+                    }
                 }
 
-                // Final Score:
-                Console.WriteLine();
-                Console.WriteLine("═══════════════════════════════");
-                Console.WriteLine("🎉 FINAL SCORE 🎉");
-                Console.WriteLine($"{player1}: {score1} points. ");
-                Console.WriteLine($"{player2}: {score2} points. ");
-                Console.WriteLine("═══════════════════════════════");
+            // Final Score:
+            Console.WriteLine();
+            Console.WriteLine("═══════════════════════════════");
+            Console.WriteLine("🎉 FINAL SCORE 🎉");
+            Console.WriteLine($"{player1}: {score1} points. ");
+            Console.WriteLine($"{player2}: {score2} points. ");
+            Console.WriteLine("═══════════════════════════════");
 
-                // Determine Winner:
-                string winner;
-                if (score1 >= goal)
-                {
-                    winner = player1;
-                }
-                else if (score2 >= goal)
-                {
-                    winner = player2;
-                }
-                else
-                {
-                    winner = null;
-                    Console.WriteLine("Unknown winner");
-                }
+            // Determine Winner:
+            string winner;
+            if (score1 >= goal)
+            {
+                winner = player1;
+            }
+            else if (score2 >= goal)
+            {
+                winner = player2;
+            }
+            else
+            {
+                winner = null;
+                Console.WriteLine("Unknown winner");
+            }
 
-                Console.WriteLine($"🏆 The winner is: {winner}, congrats! ");
-                Console.WriteLine("═══════════════════════════════");
+            Console.WriteLine($"🏆 The winner is: {winner}, congrats! ");
+            Console.WriteLine("═══════════════════════════════");
 
-                // Play Agian?:
+                // Play Again?:
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no): ");
@@ -149,11 +183,12 @@ namespace DiceGame
                         Console.ResetColor();
                     }
                 }
+                Console.WriteLine();
+                Console.WriteLine("Thanks for playing the Dice Game!");
+                Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
             }
-            Console.WriteLine();
-            Console.WriteLine("Thanks for playing the Dice Game Game!");
-            Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️");
         }
+
         private static void tryCatchFinally(Action action)
         {
             try
