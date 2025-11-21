@@ -99,6 +99,14 @@ namespace DiceGame
                         Console.WriteLine($"Score: {score2} ");
                     });
                 }
+
+                // Final Score:
+                Console.WriteLine();
+                Console.WriteLine("═══════════════════════════════");
+                Console.WriteLine("🎉 FINAL SCORE 🎉");
+                Console.WriteLine($"{player1}: {score1} points. ");
+                Console.WriteLine($"{player2}: {score2} points. ");
+                Console.WriteLine("═══════════════════════════════");
             }
         }
         private static void tryCatchFinally(Action action)
