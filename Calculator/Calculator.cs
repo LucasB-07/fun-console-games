@@ -93,6 +93,8 @@ namespace Calculator
                 }
             }
             //TODO: outro message
+            Console.WriteLine("Thank you for using the calculator!");
+            Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
 
         private static void tryCatchFinally(Action action)
