@@ -31,26 +31,26 @@ namespace Calculator
             {
                 //REBUILDING: Input for numbers with error handling and validation and operation
 
-                var num1 = 0;
+                double num1 = 0;
                 var validNum1 = false;
                 while (!validNum1)
                 {
                     tryCatchFinally(() =>
                     {
                         Console.Write("Enter first number: ");
-                        var num1 = Convert.ToDouble(Console.ReadLine());
-                        var validNum1 = true;
+                        num1 = Convert.ToDouble(Console.ReadLine());
+                        validNum1 = true;
                     });
                 }
 
                 var operation = "";
                 var validOperation = false;
-                while (validOperation)
+                while (!validOperation)
                 {
                     tryCatchFinally(() =>
                     {
                         Console.Write("Enter an operator (+, -, *, /): ");
-                        var operation = Console.ReadLine().Trim();
+                        operation = Console.ReadLine().Trim();
 
                         if (operation != "+" && operation != "-" && operation != "*" && operation != "/")
                         {
@@ -60,15 +60,15 @@ namespace Calculator
                     });
                 }
 
-                var num2 = 0;
+                double num2 = 0;
                 var validNum2 = false;
                 while(!validNum2)
                 {
                     tryCatchFinally(() =>
                     {
                        Console.Write("Enter second number: ");
-                       var num2 = Convert.ToDouble(Console.ReadLine());
-                       var validNum2 = true;
+                       num2 = Convert.ToDouble(Console.ReadLine());
+                       validNum2 = true;
                     });
                 }
                 
