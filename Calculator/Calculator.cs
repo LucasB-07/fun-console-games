@@ -60,6 +60,18 @@ namespace Calculator
                     });
                 }
 
+                var num2 = 0;
+                var validNum2 = false;
+                while(!validNum2)
+                {
+                    tryCatchFinally(() =>
+                    {
+                       Console.Write("Enter second number: ");
+                       var num2 = Convert.ToDouble(Console.ReadLine());
+                       var validNum2 = true;
+                    });
+                }
+                
 
                 while (true)
                 {
