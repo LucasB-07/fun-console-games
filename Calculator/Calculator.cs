@@ -43,7 +43,23 @@ namespace Calculator
                     });
                 }
 
-                
+                var operation = "";
+                var validOperation = false;
+                while (validOperation)
+                {
+                    tryCatchFinally(() =>
+                    {
+                        Console.Write("Enter an operator (+, -, *, /): ");
+                        var operation = Console.ReadLine().Trim();
+
+                        if (operation != "+" && operation != "-" && operation != "*" && operation != "/")
+                        {
+                            throw new InvalidOperationException("Invalid operator. Please use +, -, *, or /.");
+                        }
+                        validOperation = true;
+                    });
+                }
+
 
                 while (true)
                 {
