@@ -72,6 +72,35 @@ namespace Calculator
                     });
                 }
                 
+                tryCatchFinally(() =>
+                {
+                    double result = 0;
+                    switch (operation)
+                    {
+                        case "+":
+                            result = num1 + num2;
+                            break;
+                        case "-": 
+                            result = num1 - num2;
+                            break;
+                        case "*":
+                            result = num1 * num2;
+                            break;
+                        case "/":
+                            if (num2 == 0)
+                            {
+                                throw new DivideByZeroException("Cannot divide by zero.");
+                            }
+                            result = num1 / num2;
+                            break;
+                        default:
+                            throw new InvalidOperationException("Invalid operator. Please use +, -, *, or /.");
+                    }
+
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
+                    Console.ResetColor();
+                });
 
                 while (true)
                 {
