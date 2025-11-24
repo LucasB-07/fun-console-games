@@ -115,6 +115,5 @@ namespace Calculator
                 Console.WriteLine();
             }
         }
-
     }
 }
