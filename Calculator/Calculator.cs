@@ -31,10 +31,21 @@ namespace Calculator
             {
                 tryCatchFinally(() =>
                 {
+                    Console.Write("Enter first number: ");
+                    var num1 = Convert.ToDouble(Console.ReadLine());
 
+                    Console.Write("Enter an operator (+, -, *, /): ");
+                    var operation = Console.ReadLine();
+
+                    Console.Write("Enter second number: ");
+                    var num2 = Convert.ToDouble(Console.ReadLine());
+
+                    //TODO: switch case for operations
                 });
-            }
 
+                //TODO: ask to calculate again
+            }
+            //TODO: outro message
         }
 
         private static void tryCatchFinally(Action action)
