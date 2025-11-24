@@ -29,47 +29,22 @@ namespace Calculator
             var calculateAgain = true;
             while (calculateAgain)
             {
-                tryCatchFinally(() =>
+                //REBUILDING: Input for numbers with error handling and validation and operation
+
+                var num1 = 0;
+                var validNum1 = false;
+                while (!validNum1)
                 {
-                    Console.Write("Enter first number: ");
-                    var num1 = Convert.ToDouble(Console.ReadLine());
-
-                    Console.Write("Enter an operator (+, -, *, /): ");
-                    var operation = Console.ReadLine().Trim();
-
-                    Console.Write("Enter second number: ");
-                    var num2 = Convert.ToDouble(Console.ReadLine());
-
-                    //TODO: switch case for operations
-                    double result = 0;
-                    switch (operation)
+                    tryCatchFinally(() =>
                     {
-                        case "+":
-                            result = num1 + num2;
-                            break;
-                        case "-": 
-                            result = num1 - num2;
-                            break;
-                        case "*":
-                            result = num1 * num2;
-                            break;
-                        case "/":
-                            if (num2 == 0)
-                            {
-                                throw new DivideByZeroException("Cannot divide by zero.");
-                            }
-                            result = num1 / num2;
-                            break;
-                        default:
-                            throw new InvalidOperationException("Invalid operator. Please use +, -, *, or /.");
-                    }
+                        Console.Write("Enter first number: ");
+                        var num1 = Convert.ToDouble(Console.ReadLine());
+                        var validNum1 = true;
+                    });
+                }
 
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine($"Result: {num1} {operation} {num2} = {result}");
-                    Console.ResetColor();
-                });
+                
 
-                //TODO: ask to calculate again
                 while (true)
                 {
                     Console.Write("Do you want to calculate again? (yes/no): ");
@@ -92,7 +67,6 @@ namespace Calculator
                     }
                 }
             }
-            //TODO: outro message
             Console.WriteLine("Thank you for using the calculator!");
             Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
