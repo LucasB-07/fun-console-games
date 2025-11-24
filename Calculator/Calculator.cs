@@ -35,7 +35,7 @@ namespace Calculator
                     var num1 = Convert.ToDouble(Console.ReadLine());
 
                     Console.Write("Enter an operator (+, -, *, /): ");
-                    var operation = Console.ReadLine();
+                    var operation = Console.ReadLine().Trim();
 
                     Console.Write("Enter second number: ");
                     var num2 = Convert.ToDouble(Console.ReadLine());
