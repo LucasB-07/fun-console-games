@@ -24,7 +24,6 @@ namespace HigherOrLowerGame
             Thread.Sleep(1000);
             Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
-            //TODO: While true loop to play again + generate random number
             var playAgain = true;
             while (playAgain)
             {
@@ -35,11 +34,8 @@ namespace HigherOrLowerGame
 
                 Console.WriteLine("[COMPUTER]: I have chosen a number between 1 and 100. Can you guess it?");
 
-                //TODO: While not correct at guessed, ask question + hidden test trigger + validate input between 1-100
-                //+ attempts + hints + congratulations message
                 while (!guessed)
                 {
-                    //REBUILDING: Input for guess with error handling and validation
                     int guess = 0;
                     var valid = false;
                     while (!valid)
@@ -61,7 +57,7 @@ namespace HigherOrLowerGame
                             valid = true;
                         });
                     }
-                    //REBUILDING: Check guess against secret number + give hints + track attempts + congratulate
+
                     tryCatchFinally(() =>
                     {
                         attempts +=1;
@@ -89,7 +85,7 @@ namespace HigherOrLowerGame
                         }
                     });
                 }
-                //TODO: Play again?
+
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no): ");
@@ -108,15 +104,16 @@ namespace HigherOrLowerGame
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid input! Please type 'yes' or 'no'.");
+                        Console.WriteLine();
                         Console.ResetColor();
                     }
                 }
             }
-            Console.WriteLine("Thank you for using the calculator");
+            Console.WriteLine();
+            Console.WriteLine("Thank you for using the Higher or Lower Game!");
             Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
 
-        // Error handling method
         private static void tryCatchFinally(Action action)
         {
             try
