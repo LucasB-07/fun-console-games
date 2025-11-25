@@ -36,7 +36,7 @@ namespace HigherOrLowerGame
                 Console.WriteLine("[COMPUTER]: I have chosen a number between 1 and 100. Can you guess it?");
 
                 //TODO: While not correct at guessed, ask question + hidden test trigger + validate input between 1-100
-                //+ attempts + hints + error handling
+                //+ attempts + hints + congratulations message
                 while (!guessed)
                 {
                     tryCatchFinally(() =>
@@ -55,14 +55,35 @@ namespace HigherOrLowerGame
                             throw new ArgumentOutOfRangeException("Please enter a valid number between 1 and 100.");
                             return;
                         }
+
+                        attempts +=1;
+
+                        if (guess < secretNumber)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("[COMPUTER]: Higher! ⬆");
+                            Console.ResetColor();
+                        }
+                        else if (guess > secretNumber)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("[COMPUTER]: Lower! ⬇");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.WriteLine("═══════════════════════════════════════════════════════════════");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine($"[COMPUTER]: Congratulations! You've guessed the number {secretNumber} in {attempts} attempts! 🎉");
+                            Console.ResetColor();
+                            Console.WriteLine("═══════════════════════════════════════════════════════════════");
+                            guessed = true;
+                        }
                     });
                 }
+                //TODO: Play again?
+
             }
-
-
-            //TODO: Congratulate + show attempts + play again prompt
-
-            //TODO: Play again?
         }
 
         // Error handling method
