@@ -60,7 +60,7 @@ namespace HigherOrLowerGame
 
                     tryCatchFinally(() =>
                     {
-                        attempts +=1;
+                        attempts += 1;
 
                         if (guess < secretNumber)
                         {
