@@ -49,7 +49,7 @@ namespace HigherOrLowerGame
                             throw new ArgumentException($"Test Activated ✅");
                         }
 
-                        var guess;
+                        int guess;
                         if (!int.TryParse(inputGuess, out guess) || guess < 1 || guess > 100)
                         {
                             throw new ArgumentOutOfRangeException("Please enter a valid number between 1 and 100.");
@@ -104,7 +104,7 @@ namespace HigherOrLowerGame
                     }
                 }
             }
-            Console.WriteLine("Thank you for using the calculator!");
+            Console.WriteLine("Thank you for using the calculator");
             Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
 
