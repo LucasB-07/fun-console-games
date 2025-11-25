@@ -39,23 +39,31 @@ namespace HigherOrLowerGame
                 //+ attempts + hints + congratulations message
                 while (!guessed)
                 {
+                    //REBUILDING: Input for guess with error handling and validation
+                    int guess = 0;
+                    var valid = false;
+                    while (!valid)
+                    {
+                        tryCatchFinally(() =>
+                        {
+                            Console.Write("Enter your guess: ");
+                            var inputGuess = Console.ReadLine();
+
+                            if (inputGuess.ToLower() == "test")
+                            {
+                                throw new ArgumentException($"Test Activated ✅");
+                            }
+
+                            if (!int.TryParse(inputGuess, out guess) || guess < 1 || guess > 100)
+                            {
+                                throw new ArgumentOutOfRangeException("Please enter a valid number between 1 and 100.");
+                            }
+                            valid = true;
+                        });
+                    }
+                    //REBUILDING: Check guess against secret number + give hints + track attempts + congratulate
                     tryCatchFinally(() =>
                     {
-                        Console.Write("Enter your guess: ");
-                        var inputGuess = Console.ReadLine();
-
-                        if (inputGuess.ToLower() == "test")
-                        {
-                            throw new ArgumentException($"Test Activated ✅");
-                        }
-
-                        int guess;
-                        if (!int.TryParse(inputGuess, out guess) || guess < 1 || guess > 100)
-                        {
-                            throw new ArgumentOutOfRangeException("Please enter a valid number between 1 and 100.");
-                            return;
-                        }
-
                         attempts +=1;
 
                         if (guess < secretNumber)
