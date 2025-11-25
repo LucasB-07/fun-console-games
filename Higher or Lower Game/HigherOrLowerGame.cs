@@ -25,6 +25,18 @@ namespace HigherOrLowerGame
             Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
             //TODO: While true loop to play again + generate random number
+            var playAgain = true;
+            while (playAgain)
+            {
+                Random random = new Random();
+                var secretNumber = random.Next(1, 101);
+                var attempts = 0;
+                var guessed = false;
+
+                Console.WriteLine("[COMPUTER]: I have chosen a number between 1 and 100. Can you guess it?");
+
+
+            }
 
             //TODO: While not correct at guessed, ask question + hidden test trigger + validate input between 1-100 + attempts + hints + error handling
 
