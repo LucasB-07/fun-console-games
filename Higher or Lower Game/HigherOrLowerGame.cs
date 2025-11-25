@@ -57,7 +57,6 @@ namespace HigherOrLowerGame
                         }
                     });
                 }
-
             }
 
 
@@ -67,5 +66,23 @@ namespace HigherOrLowerGame
         }
 
         // Error handling method
+        private static void tryCatchFinally(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[ERROR]: {ex.Message}");
+                Console.ResetColor();
+            }
+            finally
+            {
+                Console.WriteLine("↪ try-catch has ended");
+                Console.WriteLine();
+            }
+        }
     }
 }
