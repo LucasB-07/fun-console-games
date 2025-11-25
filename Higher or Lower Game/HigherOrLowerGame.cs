@@ -35,14 +35,37 @@ namespace HigherOrLowerGame
 
                 Console.WriteLine("[COMPUTER]: I have chosen a number between 1 and 100. Can you guess it?");
 
+                //TODO: While not correct at guessed, ask question + hidden test trigger + validate input between 1-100
+                //+ attempts + hints + error handling
+                while (!guessed)
+                {
+                    tryCatchFinally(() =>
+                    {
+                        Console.Write("Enter your guess: ");
+                        var inputGuess = Console.ReadLine();
+
+                        if (inputGuess.ToLower() == "test")
+                        {
+                            throw new ArgumentException($"Test Activated ✅");
+                        }
+
+                        var guess;
+                        if (!int.TryParse(inputGuess, out guess) || guess < 1 || guess > 100)
+                        {
+                            throw new ArgumentOutOfRangeException("Please enter a valid number between 1 and 100.");
+                            return;
+                        }
+                    });
+                }
 
             }
 
-            //TODO: While not correct at guessed, ask question + hidden test trigger + validate input between 1-100 + attempts + hints + error handling
 
             //TODO: Congratulate + show attempts + play again prompt
 
             //TODO: Play again?
         }
+
+        // Error handling method
     }
 }
