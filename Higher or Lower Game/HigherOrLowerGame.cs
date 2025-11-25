@@ -25,9 +25,9 @@ namespace HigherOrLowerGame
             Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
             var playAgain = true;
+            Random random = new Random();
             while (playAgain)
             {
-                Random random = new Random();
                 var secretNumber = random.Next(1, 101);
                 var attempts = 0;
                 var guessed = false;
