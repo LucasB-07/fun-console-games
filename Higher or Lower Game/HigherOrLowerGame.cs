@@ -103,8 +103,9 @@ namespace HigherOrLowerGame
                         Console.ResetColor();
                     }
                 }
-
             }
+            Console.WriteLine("Thank you for using the calculator!");
+            Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
 
         // Error handling method
