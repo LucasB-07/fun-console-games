@@ -29,8 +29,6 @@ namespace Calculator
             var calculateAgain = true;
             while (calculateAgain)
             {
-                //REBUILDING: Input for numbers with error handling and validation and operation
-
                 double num1 = 0;
                 var validNum1 = false;
                 while (!validNum1)
