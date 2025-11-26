@@ -24,7 +24,31 @@ namespace RockPaperScissors
             Console.WriteLine("Try to win as many rounds as possible! Good luck and have fun. \n");
             Thread.Sleep(1000);
 
-            
+            var playAgain = true;
+            Random random = new Random();
+
+            while(playAgain)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Choose one of the following options:");
+                Console.WriteLine("1. Rock");
+                Console.WriteLine("2. Paper");
+                Console.WriteLine("3. Scissors");
+                Console.WriteLine();
+                
+                int playerChoice = 0;
+                var validChoice = false;
+
+                //TODO: loop until players enter a valid choice
+                while(!validChoice)
+                {
+                    tryCatchFinally(() =>
+                    {
+                        //TODO: Input handling and validation
+                    });
+                }
+
+            }
         }
     }
 }
