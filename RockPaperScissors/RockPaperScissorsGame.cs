@@ -118,7 +118,32 @@ namespace RockPaperScissors
                             throw new InvalidOperationException("An error occurred while determining the winner.");
                     }
                 });
+
+                // Ask to play again
+                while (true)
+                {
+                    Console.Write("Do you want to play again? (yes/no): ");
+                    var answer = Console.ReadLine().ToLower();
+
+                    if (answer == "yes")
+                    {
+                        break;
+                    }
+                    else if (answer == "no")
+                    {
+                        playAgain = false;
+                        break;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Invalid input! Please type 'yes' or 'no'.");
+                        Console.WriteLine();
+                        Console.ResetColor();
+                    }
+                }
             }
+            
         }
         
         private static string ConvertChoice(int choice)
