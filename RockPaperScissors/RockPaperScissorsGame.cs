@@ -143,7 +143,10 @@ namespace RockPaperScissors
                     }
                 }
             }
-            
+            // End of Game
+            Console.WriteLine();
+            Console.WriteLine("Thank you for using the Rock Paper Scissors Game!");
+            Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
         
         private static string ConvertChoice(int choice)
