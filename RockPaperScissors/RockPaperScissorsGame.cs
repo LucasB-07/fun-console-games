@@ -36,17 +36,29 @@ namespace RockPaperScissors
                 Console.WriteLine("3. Scissors");
                 Console.WriteLine();
                 
-                string playerChoice = "";
+                //player input with validation
+                var playerChoice = "";
                 var validChoice = false;
-                //TODO: loop until players enter a valid choice
                 while(!validChoice)
                 {
                     tryCatchFinally(() =>
                     {
-                        //TODO: Input handling and validation
+                        Console.Write("Enter your choice (rock, paper, scissors): ");
+                        var answer = Console.ReadLine().Trim().ToLower();
+
+                        if (answer.ToLower() == "test")
+                        {
+                            throw new ArgumentException("Test Activated ✅");
+                        }
+                        if (answer != "rock" && answer != "paper" && answer != "scissors")
+                        {
+                            throw new InvalidOperationException("Invalid choice. Please choose rock, paper, or scissors.");
+                        }
+                        playerChoice = answer;
+                        validChoice = true;
                     });
                 }
-
+                //TODO: computer choice
             }
         }
 
