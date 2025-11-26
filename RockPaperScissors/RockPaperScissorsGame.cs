@@ -45,7 +45,7 @@ namespace RockPaperScissors
                         Console.Write("Enter your choice (rock, paper, scissors): ");
                         var answer = Console.ReadLine().Trim().ToLower();
 
-                        if (answer.ToLower() == "test")
+                        if (answer == "test")
                         {
                             throw new ArgumentException("Test Activated ✅");
                         }
@@ -66,9 +66,9 @@ namespace RockPaperScissors
                 });
                 Console.WriteLine("═══════════════════════════════════════════════════════════════");
 
+                string result = "";
                 tryCatchFinally(() =>
                 {
-                    string result = "";
                     switch (playerChoice)
                     {
                         case "rock":
