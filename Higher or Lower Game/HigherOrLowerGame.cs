@@ -12,6 +12,7 @@ namespace HigherOrLowerGame
             CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
             Console.Title = "Higher or Lower Game";
+            
             Console.WriteLine("< - - - - - - - - 📈 Higher or Lower Game 📉 - - - - - - - - >");
             Thread.Sleep(1000);
             Console.WriteLine("Welcome to the Higher or Lower Game! Below is some information: ");
