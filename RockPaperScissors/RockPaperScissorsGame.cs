@@ -113,6 +113,9 @@ namespace RockPaperScissors
                             {
                                 result = "Its a tie!";
                             }
+                            break;
+                        default:
+                            throw new InvalidOperationException("An error occurred while determining the winner.");
                     }
                 });
             }
