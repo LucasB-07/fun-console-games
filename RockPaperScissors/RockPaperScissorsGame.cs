@@ -36,9 +36,8 @@ namespace RockPaperScissors
                 Console.WriteLine("3. Scissors");
                 Console.WriteLine();
                 
-                int playerChoice = 0;
+                string playerChoice = "";
                 var validChoice = false;
-
                 //TODO: loop until players enter a valid choice
                 while(!validChoice)
                 {
@@ -48,6 +47,25 @@ namespace RockPaperScissors
                     });
                 }
 
+            }
+        }
+
+        private static void tryCatchFinally(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[ERROR]: {ex.Message}");
+                Console.ResetColor();
+            }
+            finally
+            {
+                Console.WriteLine("↪ try-catch has ended");
+                Console.WriteLine();
             }
         }
     }
