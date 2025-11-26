@@ -117,7 +117,11 @@ namespace RockPaperScissors
                             throw new InvalidOperationException("An error occurred while determining the winner.");
                     }
                 });
-
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine(result);
+                Console.ResetColor();
+                Console.WriteLine("═══════════════════════════════════════════════════════════════");
+                
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no): ");
