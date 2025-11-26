@@ -100,6 +100,19 @@ namespace RockPaperScissors
                                 result = "Computer wins!";
                             }
                             break;
+                        case "scissors":
+                            if (computerChoice == "rock")
+                            {
+                                result = "Computer wins!";
+                            }
+                            else if (computerChoice == "paper")
+                            {
+                                result = "You win!";
+                            }
+                            else if (computerChoice == "scissors")
+                            {
+                                result = "Its a tie!";
+                            }
                     }
                 });
             }
