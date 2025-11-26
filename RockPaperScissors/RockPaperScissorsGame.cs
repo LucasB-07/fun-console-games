@@ -36,7 +36,6 @@ namespace RockPaperScissors
                 Console.WriteLine("3. Scissors");
                 Console.WriteLine();
                 
-                //player input with validation
                 var playerChoice = "";
                 var validChoice = false;
                 while(!validChoice)
@@ -58,7 +57,7 @@ namespace RockPaperScissors
                         validChoice = true;
                     });
                 }
-                //TODO: computer choice + method to convert number to choice
+
                 string computerChoice = "";
                 tryCatchFinally(() =>
                 {
@@ -66,6 +65,29 @@ namespace RockPaperScissors
                     Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
                 });
                 Console.WriteLine("═══════════════════════════════════════════════════════════════");
+
+                //TODO: Determine winner based on choices 
+                tryCatchFinally(() =>
+                {
+                    string result = "";
+                    switch (playerChoice)
+                    {
+                        case "rock":
+                            if (computerChoice == "rock")
+                            {
+                                result = "Its a tie!";
+                            }
+                            else if (computerChoice == "paper")
+                            {
+                                result = "Computer wins!";
+                            }
+                            else if (computerChoice == "scissors")
+                            {
+                                result = "You win!";
+                            }
+                            break;
+                    }
+                });
             }
         }
         
