@@ -58,10 +58,31 @@ namespace RockPaperScissors
                         validChoice = true;
                     });
                 }
-                //TODO: computer choice
+                //TODO: computer choice + method to convert number to choice
+                string computerChoice = "";
+                tryCatchFinally(() =>
+                {
+                    computerChoice = ConvertChoice(random.Next(1,4));
+                    Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
+                });
+                Console.WriteLine("═══════════════════════════════════════════════════════════════");
             }
         }
-
+        
+        private static string ConvertChoice(int choice)
+        {
+            switch(choice)
+            {
+                case 1:
+                    return "rock";
+                case 2:
+                    return "paper";
+                case 3:
+                    return "scissors";
+                default:
+                    throw new ArgumentOutOfRangeException("Invalid choice number.");
+            }
+        }
         private static void tryCatchFinally(Action action)
         {
             try
