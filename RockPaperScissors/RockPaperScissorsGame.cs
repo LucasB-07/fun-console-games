@@ -66,7 +66,6 @@ namespace RockPaperScissors
                 });
                 Console.WriteLine("═══════════════════════════════════════════════════════════════");
 
-                //TODO: Determine winner based on choices 
                 tryCatchFinally(() =>
                 {
                     string result = "";
@@ -119,7 +118,6 @@ namespace RockPaperScissors
                     }
                 });
 
-                // Ask to play again
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no): ");
@@ -143,7 +141,6 @@ namespace RockPaperScissors
                     }
                 }
             }
-            // End of Game
             Console.WriteLine();
             Console.WriteLine("Thank you for using the Rock Paper Scissors Game!");
             Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
