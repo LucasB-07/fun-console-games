@@ -142,6 +142,27 @@ namespace RockPaperScissors
                     round += 1;
                 }
 
+                // Display final scores
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"\nFinal Scores:\nYou: {playerScore}\nComputer: {computerScore}");
+                if (playerScore > computerScore)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine("🏆 Congratulations! You are the overall winner!");
+                }
+                else if (computerScore > playerScore)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("💀 The computer is the overall winner! Better luck next time.");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("🤝 It's an overall tie!");
+                }
+                Console.ResetColor();
+                Console.WriteLine("═══════════════════════════════════════════════════════════════");
+
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no): ");
@@ -158,7 +179,7 @@ namespace RockPaperScissors
                     }
                     else
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Invalid input! Please type 'yes' or 'no'.");
                         Console.WriteLine();
                         Console.ResetColor();
@@ -192,7 +213,7 @@ namespace RockPaperScissors
             }
             catch (Exception ex)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine($"[ERROR]: {ex.Message}");
                 Console.ResetColor();
             }
