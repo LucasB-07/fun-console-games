@@ -23,12 +23,15 @@ namespace RockPaperScissors
             Thread.Sleep(1000);
             Console.WriteLine("Try to win as many rounds as possible! Good luck and have fun. \n");
             Thread.Sleep(1000);
+            Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
             var playAgain = true;
             Random random = new Random();
 
             while(playAgain)
             {
+                //TODO: Add score tracking system
+                
                 Console.WriteLine();
                 Console.WriteLine("Choose one of the following options:");
                 Console.WriteLine("1. Rock");
