@@ -28,103 +28,120 @@ namespace RockPaperScissors
             var playAgain = true;
             Random random = new Random();
 
-            while(playAgain)
+            while (playAgain)
             {
                 //TODO: Add score tracking system
-                
-                Console.WriteLine();
-                Console.WriteLine("Choose one of the following options:");
-                Console.WriteLine("1. Rock");
-                Console.WriteLine("2. Paper");
-                Console.WriteLine("3. Scissors");
-                Console.WriteLine();
-                
-                var playerChoice = "";
-                var validChoice = false;
-                while(!validChoice)
+                int playerScore = 0;
+                int computerScore = 0;
+                int round = 1;
+
+                while (round <= 3)
                 {
+                    Console.WriteLine();
+                    Console.WriteLine("Choose one of the following options:");
+                    Console.WriteLine("1. Rock");
+                    Console.WriteLine("2. Paper");
+                    Console.WriteLine("3. Scissors");
+                    Console.WriteLine();
+
+                    var playerChoice = "";
+                    var validChoice = false;
+                    while (!validChoice)
+                    {
+                        tryCatchFinally(() =>
+                        {
+                            Console.Write("Enter your choice (rock, paper, scissors): ");
+                            var answer = Console.ReadLine().Trim().ToLower();
+
+                            if (answer == "test")
+                            {
+                                throw new ArgumentException("Test Activated ✅");
+                            }
+                            if (answer != "rock" && answer != "paper" && answer != "scissors")
+                            {
+                                throw new InvalidOperationException("Invalid choice. Please choose rock, paper, or scissors.");
+                            }
+                            playerChoice = answer;
+                            validChoice = true;
+                        });
+                    }
+
+                    string computerChoice = "";
                     tryCatchFinally(() =>
                     {
-                        Console.Write("Enter your choice (rock, paper, scissors): ");
-                        var answer = Console.ReadLine().Trim().ToLower();
-
-                        if (answer == "test")
-                        {
-                            throw new ArgumentException("Test Activated ✅");
-                        }
-                        if (answer != "rock" && answer != "paper" && answer != "scissors")
-                        {
-                            throw new InvalidOperationException("Invalid choice. Please choose rock, paper, or scissors.");
-                        }
-                        playerChoice = answer;
-                        validChoice = true;
+                        computerChoice = ConvertChoice(random.Next(1, 4));
+                        Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
                     });
+                    Console.WriteLine("═══════════════════════════════════════════════════════════════");
+
+                    string result = "";
+                    tryCatchFinally(() =>
+                    {
+                        switch (playerChoice)
+                        {
+                            case "rock":
+                                if (computerChoice == "rock")
+                                {
+                                    result = "Its a tie!";
+                                }
+                                else if (computerChoice == "paper")
+                                {
+                                    result = "Computer wins!";
+                                }
+                                else if (computerChoice == "scissors")
+                                {
+                                    result = "You win!";
+                                }
+                                break;
+                            case "paper":
+                                if (computerChoice == "rock")
+                                {
+                                    result = "You win!";
+                                }
+                                else if (computerChoice == "paper")
+                                {
+                                    result = "Its a tie!";
+                                }
+                                else if (computerChoice == "scissors")
+                                {
+                                    result = "Computer wins!";
+                                }
+                                break;
+                            case "scissors":
+                                if (computerChoice == "rock")
+                                {
+                                    result = "Computer wins!";
+                                }
+                                else if (computerChoice == "paper")
+                                {
+                                    result = "You win!";
+                                }
+                                else if (computerChoice == "scissors")
+                                {
+                                    result = "Its a tie!";
+                                }
+                                break;
+                            default:
+                                throw new InvalidOperationException("An error occurred while determining the winner.");
+                        }
+                    });
+
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.WriteLine(result);
+                    Console.ResetColor();
+
+                    if (result == "You win!")
+                    {
+                        playerScore += 1;
+                    }
+                    else if (result == "Computer wins!")
+                    {
+                        computerScore += 1;
+                    }
+                    Console.WriteLine("═══════════════════════════════════════════════════════════════");
+                    round += 1;
                 }
 
-                string computerChoice = "";
-                tryCatchFinally(() =>
-                {
-                    computerChoice = ConvertChoice(random.Next(1,4));
-                    Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
-                });
-                Console.WriteLine("═══════════════════════════════════════════════════════════════");
-
-                string result = "";
-                tryCatchFinally(() =>
-                {
-                    switch (playerChoice)
-                    {
-                        case "rock":
-                            if (computerChoice == "rock")
-                            {
-                                result = "Its a tie!";
-                            }
-                            else if (computerChoice == "paper")
-                            {
-                                result = "Computer wins!";
-                            }
-                            else if (computerChoice == "scissors")
-                            {
-                                result = "You win!";
-                            }
-                            break;
-                        case "paper":
-                            if (computerChoice == "rock")
-                            {
-                                result = "You win!";
-                            }
-                            else if (computerChoice == "paper")
-                            {
-                                result = "Its a tie!";
-                            }
-                            else if (computerChoice == "scissors")
-                            {
-                                result = "Computer wins!";
-                            }
-                            break;
-                        case "scissors":
-                            if (computerChoice == "rock")
-                            {
-                                result = "Computer wins!";
-                            }
-                            else if (computerChoice == "paper")
-                            {
-                                result = "You win!";
-                            }
-                            else if (computerChoice == "scissors")
-                            {
-                                result = "Its a tie!";
-                            }
-                            break;
-                        default:
-                            throw new InvalidOperationException("An error occurred while determining the winner.");
-                    }
-                });
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine(result);
-                Console.ResetColor();
-                Console.WriteLine("═══════════════════════════════════════════════════════════════");
-                
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no): ");
@@ -152,10 +169,10 @@ namespace RockPaperScissors
             Console.WriteLine("Thank you for using the Rock Paper Scissors Game!");
             Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
-        
+
         private static string ConvertChoice(int choice)
         {
-            switch(choice)
+            switch (choice)
             {
                 case 1:
                     return "rock";
