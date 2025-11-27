@@ -64,7 +64,6 @@ namespace DiceGame
                 Console.WriteLine();
                 while (score1 < goal && score2 < goal)
                 {
-                    //Player 1 turn:
                     while (true)
                     {
                         var turnFinished = false;
@@ -98,7 +97,7 @@ namespace DiceGame
                             break;
                         }
                     }
-                    // Player 2 turn:
+
                     while (true)
                     {
                         var turnFinished = false;
@@ -134,7 +133,6 @@ namespace DiceGame
                     }
                 }
 
-            // Final Score:
             Console.WriteLine();
             Console.WriteLine("═══════════════════════════════");
             Console.WriteLine("🎉 FINAL SCORE 🎉");
@@ -142,7 +140,6 @@ namespace DiceGame
             Console.WriteLine($"{player2}: {score2} points. ");
             Console.WriteLine("═══════════════════════════════");
 
-            // Determine Winner:
             string winner;
             if (score1 >= goal)
             {
@@ -161,7 +158,6 @@ namespace DiceGame
             Console.WriteLine($"🏆 The winner is: {winner}, congrats! ");
             Console.WriteLine("═══════════════════════════════");
 
-                // Play Again?:
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no): ");
