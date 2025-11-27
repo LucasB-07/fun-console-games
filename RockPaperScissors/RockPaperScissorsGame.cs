@@ -30,7 +30,6 @@ namespace RockPaperScissors
 
             while (playAgain)
             {
-                //TODO: Add score tracking system
                 int playerScore = 0;
                 int computerScore = 0;
                 int round = 1;
@@ -142,7 +141,6 @@ namespace RockPaperScissors
                     round += 1;
                 }
 
-                // Display final scores
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"\nFinal Scores:\nYou: {playerScore}\nComputer: {computerScore}");
                 if (playerScore > computerScore)
