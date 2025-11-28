@@ -65,10 +65,20 @@ namespace HangmanGame
                     attemptLeft -= 1;
                     Console.WriteLine("Wrong guess!\n");
                 }
-
             }
 
             //rest of the code
+            //Game over, display result
+            Console.WriteLine("═══════════════════════════════════════════════════════════════");
+            if (!new string(display).Contains('_'))
+            {
+                Console.WriteLine($"Congratulations! You've guessed the word: {secretWord}");
+            }
+            else
+            {
+                Console.WriteLine($"Game Over! The correct word was: {secretWord}");
+            }
+            Console.WriteLine("═══════════════════════════════════════════════════════════════");
 
         }
     }
