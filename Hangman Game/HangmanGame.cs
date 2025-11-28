@@ -25,12 +25,12 @@ namespace HangmanGame
             Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
             var playAgain = true;
-            while(plaAgain)
-            {
-            
-                string[] words = { "computer", "hangman", "gaming", "csharp", "software" };
-                Random random = new Random();
 
+            Random random = new Random();
+            string[] words = { "computer", "hangman", "gaming", "csharp", "software" };
+            
+            while(playAgain)
+            {
                 string secretWord = words[random.Next(words.Length)];
                 char[] display = new string('_', secretWord.Length).ToCharArray();
 
