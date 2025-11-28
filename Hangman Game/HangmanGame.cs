@@ -33,8 +33,6 @@ namespace HangmanGame
             int attemptLeft = 7;
             string guessedLetters = "";
 
-            Console.WriteLine("Hangman (Basic Version, improved)");
-
             //Game loop, continues until attempts run out or word is guessed
             while (attemptLeft > 0 && new string(display).Contains('_'))
             {
