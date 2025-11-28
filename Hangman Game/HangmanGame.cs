@@ -75,7 +75,7 @@ namespace HangmanGame
                     //Check if guessed letter is in the secret word
                     if (secretWord.Contains(guessedLetter))
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine("Correct guess!\n");
                         Console.ResetColor();
 
@@ -92,7 +92,7 @@ namespace HangmanGame
                     {
                         attemptLeft -= 1;
                         PrintHangman(attemptLeft);
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Wrong guess!\n");
                         Console.ResetColor();
                     }
@@ -111,6 +111,28 @@ namespace HangmanGame
                 }
                 Console.WriteLine("═══════════════════════════════════════════════════════════════");
 
+                while (true)
+                {
+                    Console.Write("Do you want to play again? (yes/no):");
+                    var answer = Console.ReadLine().ToLower();
+
+                    if (answer == "yes")
+                    {
+                        break;
+                    }
+                    else if (answer == "no")
+                    {
+                        playAgain = false;
+                        break;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Invalid input! Please type 'yes' or 'no'.");
+                        Console.WriteLine();
+                        Console.ResetColor();
+                    }
+                }
             }
 
             Console.WriteLine("Thank you for using the Hangman game!");
