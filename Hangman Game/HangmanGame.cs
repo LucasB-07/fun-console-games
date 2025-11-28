@@ -60,7 +60,12 @@ namespace HangmanGame
                         }
                     }
                 }
-                
+                else
+                {
+                    attemptLeft -= 1;
+                    Console.WriteLine("Wrong guess!\n");
+                }
+
             }
 
             //rest of the code
