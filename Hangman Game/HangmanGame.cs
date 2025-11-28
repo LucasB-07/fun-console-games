@@ -35,6 +35,13 @@ namespace HangmanGame
                     System.Console.WriteLine("Please enter a single letter.\n");
                     continue;
                 }
+                //Takes the first character of the input string
+                char guessedLetter = input[0];
+                if (guessedLetters.Contains(guessedLetter))
+                {
+                    Console.WriteLine("You already guessed that letter. Try again.\n");
+                    continue;
+                }
             }
 
             //rest of the code
