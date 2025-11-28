@@ -17,7 +17,7 @@ namespace HangmanGame
             int attemptLeft = 7;
             string guessedLetters = "";
 
-            Console.WriteLine("Hangman (Basic Version, for now)");
+            Console.WriteLine("Hangman (Basic Version, improved)");
 
             //Game loop, continues until attempts run out or word is guessed
             while (attemptLeft > 0 && new string(display).Contains('_'))
@@ -35,8 +35,16 @@ namespace HangmanGame
                     System.Console.WriteLine("Please enter a single letter.\n");
                     continue;
                 }
-                //Takes the first character of the input string
                 char guessedLetter = input[0];
+
+                //check if the input is a letter
+                if (!char.IsLetter(guessedLetter))
+                {
+                    Console.WriteLine("Please enter a valid letter.\n");
+                    continue;
+                }
+
+                //Takes the first character of the input string
                 if (guessedLetters.Contains(guessedLetter))
                 {
                     Console.WriteLine("You already guessed that letter. Try again.\n");
