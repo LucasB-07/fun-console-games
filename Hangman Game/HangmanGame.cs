@@ -28,6 +28,13 @@ namespace HangmanGame
                 Console.Write("Guess a letter: ");
                 
                 //rest of the code
+                //Checking if string input is valid, not longer than 1 char and not already guessed
+                string input = Console.ReadLine().ToLower();
+                if (input.Length != 1 )
+                {
+                    System.Console.WriteLine("Please enter a single letter.\n");
+                    continue;
+                }
             }
 
             //rest of the code
