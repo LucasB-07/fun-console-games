@@ -40,7 +40,7 @@ namespace HangmanGame
                 //check if the input is a letter
                 if (!char.IsLetter(guessedLetter))
                 {
-                    Console.WriteLine("Please enter a valid letter.\n");
+                    Console.WriteLine("Please enter a valid letter (a-z).\n");
                     continue;
                 }
 
@@ -51,8 +51,8 @@ namespace HangmanGame
                     continue;
                 }
                 
-                //adds the guessed letter to the string of guessed letters
-                guessedLetters += guessedLetter;
+                //Add guessed letter with a space for reading clarity
+                guessedLetters += guessedLetter + " ";
 
                 //Check if guessed letter is in the secret word
                 if (secretWord.Contains(guessedLetter))
