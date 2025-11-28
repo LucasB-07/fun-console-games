@@ -19,6 +19,19 @@ namespace HangmanGame
 
             Console.WriteLine("Hangman (Basic Version, for now)");
 
+            //Game loop, continues until attempts run out or word is guessed
+            while (attemptLeft > 0 && new string(display).Contains('_'))
+            {
+                Console.WriteLine($"Word: {new string(display)}");
+                Console.WriteLine($"Attempts left: {attemptLeft}");
+                Console.WriteLine($"Guessed letters: {guessedLetters}");
+                Console.Write("Guess a letter: ");
+                
+                //rest of the code
+            }
+
+            //rest of the code
+
         }
     }
 }
