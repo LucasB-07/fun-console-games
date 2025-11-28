@@ -42,10 +42,25 @@ namespace HangmanGame
                     Console.WriteLine("You already guessed that letter. Try again.\n");
                     continue;
                 }
-
-                //Check if guessed letter is in the secret word
+                
+                //adds the guessed letter to the string of guessed letters
                 guessedLetters += guessedLetter;
 
+                //Check if guessed letter is in the secret word
+                if (secretWord.Contains(guessedLetter))
+                {
+                    Console.WriteLine("Correct guess!\n");
+
+                    //Replace underscores with correctly guessed letters
+                    for (int i = 0; i < secretWord.Length; i +=1)
+                    {
+                        if (secretWord[i] == guessedLetter)
+                        {
+                            display[i] = guessedLetter;
+                        }
+                    }
+                }
+                
             }
 
             //rest of the code
