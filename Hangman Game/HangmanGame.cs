@@ -91,7 +91,6 @@ namespace HangmanGame
                 Console.WriteLine($"Game Over! The correct word was: {secretWord}");
             }
             Console.WriteLine("═══════════════════════════════════════════════════════════════");
-
         }
     }
 }
