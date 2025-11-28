@@ -57,7 +57,9 @@ namespace HangmanGame
                 //Check if guessed letter is in the secret word
                 if (secretWord.Contains(guessedLetter))
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Correct guess!\n");
+                    Console.ResetColor();
 
                     //Replace underscores with correctly guessed letters
                     for (int i = 0; i < secretWord.Length; i +=1)
@@ -71,7 +73,9 @@ namespace HangmanGame
                 else
                 {
                     attemptLeft -= 1;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong guess!\n");
+                    Console.ResetColor();
                 }
             }
 
