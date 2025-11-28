@@ -92,6 +92,9 @@ namespace HangmanGame
                 Console.WriteLine($"Game Over! The correct word was: {secretWord}");
             }
             Console.WriteLine("═══════════════════════════════════════════════════════════════");
+
+            Console.WriteLine("Thank you for using the Hangman game!");
+            Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         }
 
         static void PrintHangman(int attemptsLeft)
