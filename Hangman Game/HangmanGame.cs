@@ -73,6 +73,7 @@ namespace HangmanGame
                 else
                 {
                     attemptLeft -= 1;
+                    PrintHangman(attemptLeft);
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong guess!\n");
                     Console.ResetColor();
@@ -91,6 +92,87 @@ namespace HangmanGame
                 Console.WriteLine($"Game Over! The correct word was: {secretWord}");
             }
             Console.WriteLine("═══════════════════════════════════════════════════════════════");
+        }
+
+        static void PrintHangman(int attemptsLeft)
+        {
+            if (attemptsLeft < 0)
+            {
+                attemptsLeft = 0;
+            }
+            if (attemptsLeft > 7)
+            {
+                attemptsLeft = 7;
+            }
+            string[] hangman = new string[]
+            {
+                @"
+      _______
+     |/      |
+     |      ( )
+     |      /|\
+     |      / \
+     |
+    _|___",
+                @"
+      _______
+     |/      |
+     |      ( )
+     |      /|\
+     |      /
+     |
+    _|___",
+                @"
+      _______
+     |/      |
+     |      ( )
+     |      /|\
+     |
+     |
+    _|___",
+                @"
+      _______
+     |/      |
+     |      ( )
+     |      /|
+     |
+     |
+    _|___",
+                @"
+      _______
+     |/      |
+     |      ( )
+     |       |
+     |
+     |
+    _|___",
+                @"
+      _______
+     |/      |
+     |      ( )
+     |
+     |
+     |
+    _|___",
+                @"
+      _______
+     |/      |
+     |
+     |
+     |
+     |
+    _|___",
+                @"
+      _______
+     |/
+     |
+     |
+     |
+     |
+    _|___"
+            
+            };
+            Console.WriteLine(hangman[7 - attemptsLeft]);
         }
     }
 }
