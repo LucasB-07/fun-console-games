@@ -219,5 +219,24 @@ namespace HangmanGame
             };
             Console.WriteLine(hangman[7 - attemptsLeft]);
         }
+
+        private static void tryCatchFinally(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine($"[ERROR]: {ex.Message}");
+                Console.ResetColor();
+            }
+            finally
+            {
+                Console.WriteLine("↪ try-catch has ended");
+                Console.WriteLine();
+            }
+        }
     }
 }
