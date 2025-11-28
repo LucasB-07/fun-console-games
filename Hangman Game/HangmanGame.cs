@@ -42,6 +42,10 @@ namespace HangmanGame
                     Console.WriteLine("You already guessed that letter. Try again.\n");
                     continue;
                 }
+
+                //Check if guessed letter is in the secret word
+                guessedLetters += guessedLetter;
+
             }
 
             //rest of the code
