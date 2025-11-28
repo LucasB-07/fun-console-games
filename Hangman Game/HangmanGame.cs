@@ -8,6 +8,22 @@ namespace HangmanGame
     {
         static void Main()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
+            Console.Title = "Hangman Game";
+
+            Console.WriteLine("< - - - - - - - - 🪢 Hangman Game 🪢 - - - - - - - - >");
+            Thread.Sleep(1000);
+            Console.WriteLine("Welcome to the Hangman Game! Below is some information: ");
+            Thread.Sleep(1000);
+            Console.WriteLine("Try to guess the secret word one letter at a time.");
+            Thread.Sleep(1000);
+            Console.WriteLine("You have 7 attempts to guess the word correctly before the hangman is completed.");
+            Thread.Sleep(1000);
+            Console.WriteLine("Good luck and have fun! \n");
+            Thread.Sleep(1000);
+            Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
+
             string[] words = { "computer", "hangman", "gaming", "csharp", "software" };
             Random random = new Random();
 
