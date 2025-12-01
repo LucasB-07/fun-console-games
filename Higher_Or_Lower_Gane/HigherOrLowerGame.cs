@@ -33,7 +33,14 @@ namespace HigherOrLowerGame
                 bool validDifficulty = false;
                 while (!validDifficulty)
                 {
-                    
+                    Console.WriteLine("Choose a difficulty level: ");
+                    Console.WriteLine("1. Easy (10 attempts)");
+                    Console.WriteLine("2. Medium (7 attempts)");
+                    Console.WriteLine("3. Hard (5 attempts)");
+                    Console.WriteLine("4. Insane (3 attempts)");
+                    Console.Write("Enter your choice (1, 2, 3, or 4): ");
+
+                    var choiceDifficulty = Console.ReadLine().Trim();
                 }
                 var secretNumber = random.Next(1, 101);
                 var attempts = 0;
