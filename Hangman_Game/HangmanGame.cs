@@ -109,7 +109,7 @@ namespace HangmanGame
                 while (true)
                 {
                     Console.Write("Do you want to play again? (yes/no):");
-                    var answer = Console.ReadLine().ToLower();
+                    var answer = Console.ReadLine().ToLower().Trim();
 
                     if (answer == "yes")
                     {
