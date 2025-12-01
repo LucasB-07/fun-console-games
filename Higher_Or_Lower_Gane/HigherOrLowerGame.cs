@@ -71,6 +71,11 @@ namespace HigherOrLowerGame
                             Console.WriteLine("You have chosen Insane difficulty. You have 3 attempts.");
                             Console.ResetColor();
                             break;
+                        default:
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Invalid choice! Please select 1, 2, 3, or 4.");
+                            Console.ResetColor();
+                            break;
                     }
                 }
                 var secretNumber = random.Next(1, 101);
