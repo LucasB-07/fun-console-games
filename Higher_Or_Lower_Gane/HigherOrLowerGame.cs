@@ -57,7 +57,13 @@ namespace HigherOrLowerGame
                             Console.WriteLine("You have chosen Medium difficulty. You have 7 attempts.");
                             Console.ResetColor();
                             break;
-                            
+                        case "3":
+                            maxAttempts = 5;
+                            validDifficulty = true;
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.WriteLine("You have chosen Hard difficulty. You have 5 attempts.");
+                            Console.ResetColor();
+                            break;
                     }
                 }
                 var secretNumber = random.Next(1, 101);
