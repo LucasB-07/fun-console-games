@@ -41,6 +41,17 @@ namespace HigherOrLowerGame
                     Console.Write("Enter your choice (1, 2, 3, or 4): ");
 
                     var choiceDifficulty = Console.ReadLine().Trim();
+                    switch (choiceDifficulty)
+                    {
+                        case "1":
+                            maxAttempts = 10;
+                            validDifficulty = true;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("You have chosen Easy difficulty. You have 10 attempts.");
+                            Console.ResetColor();
+                            break;
+
+                    }
                 }
                 var secretNumber = random.Next(1, 101);
                 var attempts = 0;
