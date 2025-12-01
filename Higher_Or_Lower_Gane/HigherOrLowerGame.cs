@@ -85,6 +85,12 @@ namespace HigherOrLowerGame
                             Console.WriteLine("═══════════════════════════════════════════════════════════════");
                             guessed = true;
                         }
+                        if (!guessed)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine($"[COMPUTER]: Attempts left: {maxAttempts - attempts}");
+                            Console.ResetColor();
+                        }
                     });
                 }
                 if (!guessed)
