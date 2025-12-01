@@ -32,10 +32,11 @@ namespace HigherOrLowerGame
                 var secretNumber = random.Next(1, 101);
                 var attempts = 0;
                 var guessed = false;
+                int maxAttempts = 7;
 
                 Console.WriteLine("[COMPUTER]: I have chosen a number between 1 and 100. Can you guess it?");
 
-                while (!guessed)
+                while (!guessed && attempts < maxAttempts)
                 {
                     int guess = 0;
                     var valid = false;
