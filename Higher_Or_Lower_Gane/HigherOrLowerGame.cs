@@ -87,6 +87,14 @@ namespace HigherOrLowerGame
                         }
                     });
                 }
+                if (!guessed)
+                {
+                    Console.WriteLine("═══════════════════════════════════════════════════════════════");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"[COMPUTER]: Sorry, you've used all {maxAttempts} attempts. The correct number was {secretNumber}. Better luck next time!");
+                    Console.ResetColor();
+                    Console.WriteLine("═══════════════════════════════════════════════════════════════");
+                }
 
                 while (true)
                 {
