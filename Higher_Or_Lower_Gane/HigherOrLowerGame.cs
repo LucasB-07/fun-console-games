@@ -64,6 +64,13 @@ namespace HigherOrLowerGame
                             Console.WriteLine("You have chosen Hard difficulty. You have 5 attempts.");
                             Console.ResetColor();
                             break;
+                        case "4":
+                            maxAttempts = 3;
+                            validDifficulty = true;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("You have chosen Insane difficulty. You have 3 attempts.");
+                            Console.ResetColor();
+                            break;
                     }
                 }
                 var secretNumber = random.Next(1, 101);
