@@ -29,10 +29,15 @@ namespace HigherOrLowerGame
             Random random = new Random();
             while (playAgain)
             {
+                const int maxAttempts = 7; // defaulft max attempts
+                bool validDifficulty = false;
+                while (!validDifficulty)
+                {
+                    
+                }
                 var secretNumber = random.Next(1, 101);
                 var attempts = 0;
                 var guessed = false;
-                int maxAttempts = 7;
 
                 Console.WriteLine("[COMPUTER]: I have chosen a number between 1 and 100. Can you guess it?");
 
