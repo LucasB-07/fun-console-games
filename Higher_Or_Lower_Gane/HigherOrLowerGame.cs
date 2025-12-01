@@ -29,7 +29,7 @@ namespace HigherOrLowerGame
             Random random = new Random();
             while (playAgain)
             {
-                const int maxAttempts = 7; // defaulft max attempts
+                int maxAttempts = 0;
                 bool validDifficulty = false;
                 while (!validDifficulty)
                 {
