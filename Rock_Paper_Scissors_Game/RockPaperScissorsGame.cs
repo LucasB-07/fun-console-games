@@ -142,6 +142,10 @@ namespace RockPaperScissors
                             default:
                                 throw new InvalidOperationException("An error occurred while determining the winner.");
                         }
+                        if (godMode)
+                        {
+                            result = "You win!";
+                        }
                     });
 
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
