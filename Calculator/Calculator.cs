@@ -25,6 +25,8 @@ namespace Calculator
             Thread.Sleep(400);
             Console.WriteLine("4. Division (/) ");
             Thread.Sleep(1000);
+            Console.WriteLine("5. Converter (°C → °F, km → miles, kg → lbs)");
+            Thread.Sleep(1000);
             Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - >");
 
             var calculateAgain = true;
