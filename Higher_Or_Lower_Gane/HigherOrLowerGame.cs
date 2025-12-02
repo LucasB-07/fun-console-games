@@ -73,7 +73,7 @@ namespace HigherOrLowerGame
                             break;
                         default:
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("Invalid choice! Please select 1, 2, 3, or 4.");
+                            Console.WriteLine("Invalid choice! Please select 1, 2, 3, or 4.\n");
                             Console.ResetColor();
                             break;
                     }
