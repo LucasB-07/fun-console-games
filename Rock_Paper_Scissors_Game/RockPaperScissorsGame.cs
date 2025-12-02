@@ -53,6 +53,14 @@ namespace RockPaperScissors
                             Console.Write("Enter your choice (rock, paper, scissors): ");
                             var answer = Console.ReadLine().Trim().ToLower();
 
+                            if (answer == "godmode")
+                            {
+                                godMode = true;
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("God Mode Activated! You will win every round! ✅");
+                                Console.ResetColor();
+                                continue;
+                            }
                             if (answer == "test")
                             {
                                 throw new ArgumentException("Test Activated ✅");
@@ -70,7 +78,7 @@ namespace RockPaperScissors
                     tryCatchFinally(() =>
                     {
                         computerChoice = ConvertChoice(random.Next(1, 4));
-                        Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
+                        // Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
                     });
                     Console.WriteLine("═══════════════════════════════════════════════════════════════");
 
