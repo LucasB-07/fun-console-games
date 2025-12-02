@@ -73,7 +73,16 @@ namespace Calculator
                     double result = 0;
                     tryCatchFinally(() =>
                     {
-                        
+                        switch (conversionType)
+                        {
+                            case "1":
+                                result = (valueToConvert * 9 / 5) + 32;
+                                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                Console.WriteLine($"{valueToConvert} °C = {result} °F");
+                                Console.ResetColor();
+                                break;
+
+                        }
                     });
                 }
 
