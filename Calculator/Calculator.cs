@@ -50,12 +50,12 @@ namespace Calculator
                 {
                     tryCatchFinally(() =>
                     {
-                        Console.Write("Enter an operator (+, -, *, /): ");
+                        Console.Write("Enter an operator (+, -, *, /, 5): ");
                         operation = Console.ReadLine().Trim();
 
-                        if (operation != "+" && operation != "-" && operation != "*" && operation != "/")
+                        if (operation != "+" && operation != "-" && operation != "*" && operation != "/" && operation != "5")
                         {
-                            throw new InvalidOperationException("Invalid operator. Please use +, -, *, or /.");
+                            throw new InvalidOperationException("Invalid operator. Please use +, -, *, /, or 5.");
                         }
                         validOperation = true;
                     });
