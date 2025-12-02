@@ -63,7 +63,12 @@ namespace Calculator
                 //If user chose converter
                 if (operation == "5" || operation == "converter")
                 {
-                    
+                    Console.WriteLine("Choose a conversion type:");
+                    Console.WriteLine("1. Celsius to Fahrenheit (C to F)");
+                    Console.WriteLine("2. Kilometers to Miles (km to miles)");
+                    Console.WriteLine("3. Kilogram to Pound (kg to lbs)");
+
+                    string conversionType = Console.ReadLine().Trim().ToLower();
                 }
 
                 double num2 = 0;
