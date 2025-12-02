@@ -27,6 +27,7 @@ namespace RockPaperScissors
 
             var playAgain = true;
             Random random = new Random();
+            bool godMode = false;
 
             while (playAgain)
             {
