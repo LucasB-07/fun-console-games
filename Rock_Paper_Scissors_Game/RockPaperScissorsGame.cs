@@ -79,6 +79,16 @@ namespace RockPaperScissors
                     {
                         computerChoice = ConvertChoice(random.Next(1, 4));
                         // Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
+                        if (godMode)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.WriteLine($"[COMPUTER]: I chose {computerChoice}, but you win this round because God Mode is activated! ✅");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
+                        }
                     });
                     Console.WriteLine("═══════════════════════════════════════════════════════════════");
 
