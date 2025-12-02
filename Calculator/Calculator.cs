@@ -81,7 +81,12 @@ namespace Calculator
                                 Console.WriteLine($"{valueToConvert} °C = {result} °F");
                                 Console.ResetColor();
                                 break;
-
+                            case "2":
+                                result = valueToConvert * 0.621371;
+                                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                Console.WriteLine($"{valueToConvert} km = {result} miles");
+                                Console.ResetColor();
+                                break;
                         }
                     });
                 }
