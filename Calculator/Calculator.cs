@@ -93,6 +93,9 @@ namespace Calculator
                                 Console.WriteLine($"{valueToConvert} kg = {result} lbs");
                                 Console.ResetColor();
                                 break;
+                            default:
+                                throw new InvalidOperationException("Invalid conversion type. Please choose 1, 2, or 3.");
+                                break;
                         }
                     });
                 }
