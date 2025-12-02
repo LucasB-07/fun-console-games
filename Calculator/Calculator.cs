@@ -60,6 +60,11 @@ namespace Calculator
                         validOperation = true;
                     });
                 }
+                //If user chose converter
+                if (operation == "5" || operation == "converter")
+                {
+                    
+                }
 
                 double num2 = 0;
                 var validNum2 = false;
