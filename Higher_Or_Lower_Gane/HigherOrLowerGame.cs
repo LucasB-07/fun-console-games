@@ -139,6 +139,20 @@ namespace HigherOrLowerGame
                             Console.WriteLine($"[COMPUTER]: Attempts left: {maxAttempts - attempts}");
                             Console.ResetColor();
                         }
+                        //Extra hint after 3 attempts
+                        if (attempts == 3 && !guessed)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            if (secretNumber % 2 == 0)
+                            {
+                                Console.WriteLine("[COMPUTER]: Hint: The number is even. 🔵");
+                            }
+                            else
+                            {
+                                Console.WriteLine("[COMPUTER]: Hint: The number is odd. 🔴");
+                            }
+                            Console.ResetColor();
+                        }
                     });
                 }
                 if (!guessed)
