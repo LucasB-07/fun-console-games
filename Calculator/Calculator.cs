@@ -69,6 +69,12 @@ namespace Calculator
                     Console.WriteLine("3. Kilogram to Pound (kg to lbs)");
 
                     string conversionType = Console.ReadLine().Trim().ToLower();
+                    double valueToConvert = num1;
+                    double result = 0;
+                    tryCatchFinally(() =>
+                    {
+                        
+                    });
                 }
 
                 double num2 = 0;
