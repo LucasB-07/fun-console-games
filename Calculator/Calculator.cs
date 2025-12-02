@@ -99,6 +99,10 @@ namespace Calculator
                         }
                     });
                 }
+                else
+                {
+                    //Normal calculator operations
+                }
 
                 double num2 = 0;
                 var validNum2 = false;
