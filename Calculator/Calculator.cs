@@ -87,6 +87,12 @@ namespace Calculator
                                 Console.WriteLine($"{valueToConvert} km = {result} miles");
                                 Console.ResetColor();
                                 break;
+                            case "3":
+                                result = valueToConvert * 2.20462;
+                                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                                Console.WriteLine($"{valueToConvert} kg = {result} lbs");
+                                Console.ResetColor();
+                                break;
                         }
                     });
                 }
