@@ -66,7 +66,12 @@ namespace RockPaperScissors
                             }
                             if (answer == "godmode off")
                             {
-                                
+                                godMode = false;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("God Mode Deactivated! ❌");
+                                Console.ResetColor();
+                                repeatInput = true;
+                                return;
                             }
                             if (answer == "test")
                             {
