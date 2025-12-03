@@ -94,7 +94,6 @@ namespace RockPaperScissors
                     tryCatchFinally(() =>
                     {
                         computerChoice = ConvertChoice(random.Next(1, 4));
-                        // Console.WriteLine($"[COMPUTER]: I chose {computerChoice}.");
                         if (godMode)
                         {
                             Console.ForegroundColor = ConsoleColor.Magenta;
