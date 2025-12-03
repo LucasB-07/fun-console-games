@@ -31,6 +31,7 @@ namespace RockPaperScissors
 
             while (playAgain)
             {
+                godMode = false;
                 int playerScore = 0;
                 int computerScore = 0;
                 int round = 1;
