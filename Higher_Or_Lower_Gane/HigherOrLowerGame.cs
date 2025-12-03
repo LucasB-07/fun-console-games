@@ -139,7 +139,6 @@ namespace HigherOrLowerGame
                             Console.WriteLine($"[COMPUTER]: Attempts left: {maxAttempts - attempts}");
                             Console.ResetColor();
                         }
-                        //Extra hint after 3 attempts
                         if (attempts == 3 && !guessed)
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
