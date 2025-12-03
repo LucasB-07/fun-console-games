@@ -60,7 +60,6 @@ namespace Calculator
                         validOperation = true;
                     });
                 }
-                //If user chose converter
                 if (operation == "5" || operation == "converter")
                 {
                     Console.WriteLine("Choose a conversion type:");
