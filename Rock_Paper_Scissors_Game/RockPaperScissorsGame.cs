@@ -64,6 +64,10 @@ namespace RockPaperScissors
                                 repeatInput = true;
                                 return;
                             }
+                            if (answer == "godmode off")
+                            {
+                                
+                            }
                             if (answer == "test")
                             {
                                 throw new ArgumentException("Test Activated ✅");
