@@ -84,6 +84,10 @@ namespace RockPaperScissors
                             playerChoice = answer;
                             validChoice = true;
                         });
+                        if (repeatInput)
+                        {
+                            continue;
+                        }
                     }
 
                     string computerChoice = "";
