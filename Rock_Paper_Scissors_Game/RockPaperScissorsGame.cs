@@ -48,6 +48,7 @@ namespace RockPaperScissors
                     var validChoice = false;
                     while (!validChoice)
                     {
+                        var repeatInput = false;
                         tryCatchFinally(() =>
                         {
                             Console.Write("Enter your choice (rock, paper, scissors): ");
@@ -59,7 +60,8 @@ namespace RockPaperScissors
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("God Mode Activated! You will win every round! ✅");
                                 Console.ResetColor();
-                                continue;
+                                repeatInput = true;
+                                return;
                             }
                             if (answer == "test")
                             {
