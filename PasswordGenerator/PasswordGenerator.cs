@@ -20,6 +20,7 @@ class PasswordGenerator
         Thread.Sleep(1000);
         Console.WriteLine("You can use the generated password for securing your accounts. \n");
         Thread.Sleep(1000);
+        Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
         Random random = new Random();
         string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -28,7 +29,9 @@ class PasswordGenerator
         int length;
         while(!int.TryParse(Console.ReadLine(), out length) || length <= 0)
         {
-            Console.Write("Please enter a valid positive number for the password length: ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("❌ | Invalid input. Please enter a positive number: ");
+            Console.ResetColor();
         }
 
         string password = "";
