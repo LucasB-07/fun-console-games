@@ -22,6 +22,12 @@ class PasswordGenerator
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
+        bool generateAgain = true;
+        while (generateAgain)
+        {
+            
+        }
+        
         Console.Write("How long do you want your Password to be?: ");
         int length;
         while (!int.TryParse(Console.ReadLine(), out length) || length <= 0)
