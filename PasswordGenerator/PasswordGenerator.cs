@@ -25,7 +25,12 @@ class PasswordGenerator
         string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
         Console.Write("How long do you want your Password to be?: ");
-        int length = Convert.ToInt32(Console.ReadLine());
+        // int length = Convert.ToInt32(Console.ReadLine());
+        int length;
+        while(!int.TryParse(Console.ReadLine(), out length) || length <= 0)
+        {
+            Console.Write("Please enter a valid positive number for the password length: ");
+        }
 
         string password = "";
         for (int i = 0; i < length; i +=1)
