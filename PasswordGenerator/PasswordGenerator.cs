@@ -27,7 +27,7 @@ class PasswordGenerator
 
         Console.Write("How long do you want your Password to be?: ");
         int length;
-        while(!int.TryParse(Console.ReadLine(), out length) || length <= 0)
+        while (!int.TryParse(Console.ReadLine(), out length) || length <= 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("❌ | Invalid input. Please enter a positive number: ");
@@ -35,7 +35,7 @@ class PasswordGenerator
         }
 
         string password = "";
-        for (int i = 0; i < length; i +=1)
+        for (int i = 0; i < length; i += 1)
         {
             password += chars[random.Next(chars.Length)];
         }
@@ -49,8 +49,9 @@ class PasswordGenerator
         }
         Console.ResetColor();
 
-        Console.ForegroundColor= ConsoleColor.Cyan;
-        Console.WriteLine($"\rGenerated Password: {password}");
+        Console.Write($"\rGenerated Password: ");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine($"{password}");
         Console.ResetColor();
     }
 }
