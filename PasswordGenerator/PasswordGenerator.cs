@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using System.Globalization;
-using Text;
+using System.Text;
 
 class PasswordGenerator
 {
@@ -52,7 +52,6 @@ class PasswordGenerator
         }
 
         Random random = new Random();
-        // string password = "";
         StringBuilder passwordBuilder = new StringBuilder();
         for (int i = 0; i < length; i += 1)
         {
@@ -70,7 +69,7 @@ class PasswordGenerator
 
         Console.Write($"\rGenerated Password: ");
         Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine($"{password}");
+        Console.WriteLine(passwordBuilder.ToString());
         Console.ResetColor();
     }
 }
