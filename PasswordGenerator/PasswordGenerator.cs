@@ -37,7 +37,7 @@ class PasswordGenerator
         string chars;
         if (includeSpecialChars == "yes" || includeSpecialChars == "y")
         {
-            chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>?";
+            chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
         }
         else if (includeSpecialChars == "no" || includeSpecialChars == "n")
         {
