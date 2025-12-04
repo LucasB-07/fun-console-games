@@ -12,6 +12,16 @@ class PasswordGenerator
 
         Console.Title = "Password Generator";
 
+        //print information about the app
+        Console.WriteLine("< - - - - - - - - 🔐 Password Generator 🔐 - - - - - - - - >");
+        Thread.Sleep(1000);
+        Console.WriteLine("Welcome to the Password Generator! Below is some information: ");
+        Thread.Sleep(1000);
+        Console.WriteLine("This application generates a random password based on the length you specify.");
+        Thread.Sleep(1000);
+        Console.WriteLine("You can use the generated password for securing your accounts. \n");
+        Thread.Sleep(1000);
+
 
     }
 }
