@@ -81,6 +81,10 @@ class PasswordGenerator
             {
                 generateAgain = true;
             }
+            else if (answer == "no" || answer == "n")
+            {
+                generateAgain = false;
+            }
 
         }
         Console.WriteLine("Thank you for using the Password Generator!");
