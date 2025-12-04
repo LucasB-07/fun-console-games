@@ -23,7 +23,6 @@ class PasswordGenerator
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
         Random random = new Random();
-        string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
         Console.Write("How long do you want your Password to be?: ");
         int length;
@@ -33,6 +32,9 @@ class PasswordGenerator
             Console.Write("❌ | Invalid input. Please enter a positive number: ");
             Console.ResetColor();
         }
+
+        Console.Write("Do you want to include special characters? (yes/no): ");
+        string includeSpecialChars = Console.ReadLine().Trim().ToLower();
 
         string password = "";
         for (int i = 0; i < length; i += 1)
