@@ -74,7 +74,16 @@ class PasswordGenerator
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(passwordBuilder.ToString());
             Console.ResetColor();
+
+            Console.Write("\nDo you want to generate another password? (yes/no): ");
+            var answer = Console.ReadLine().ToLower().Trim();
+            if (answer == "yes" || answer == "y")
+            {
+                generateAgain = true;
+            }
+
         }
-        
+        Console.WriteLine("Thank you for using the Password Generator!");
+        Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
     }
 }
