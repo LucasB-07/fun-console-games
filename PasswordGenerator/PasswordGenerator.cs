@@ -12,7 +12,6 @@ class PasswordGenerator
 
         Console.Title = "Password Generator";
 
-        //print information about the app
         Console.WriteLine("< - - - - - - - - 🔐 Password Generator 🔐 - - - - - - - - >");
         Thread.Sleep(1000);
         Console.WriteLine("Welcome to the Password Generator! Below is some information: ");
