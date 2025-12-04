@@ -39,6 +39,10 @@ class PasswordGenerator
         {
             chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>?";
         }
+        else if (includeSpecialChars == "no" || includeSpecialChars == "n")
+        {
+            chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        }
 
 
         Random random = new Random();
