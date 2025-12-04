@@ -85,7 +85,13 @@ class PasswordGenerator
             {
                 generateAgain = false;
             }
-
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid input! Exiting the program.");
+                Console.ResetColor();
+                generateAgain = false;
+            }
         }
         Console.WriteLine("Thank you for using the Password Generator!");
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
