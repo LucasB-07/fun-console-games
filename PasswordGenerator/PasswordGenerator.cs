@@ -52,10 +52,11 @@ class PasswordGenerator
         }
 
         Random random = new Random();
-        string password = "";
+        // string password = "";
+        StringBuilder passwordBuilder = new StringBuilder();
         for (int i = 0; i < length; i += 1)
         {
-            password += chars[random.Next(chars.Length)];
+            passwordBuilder.Append(chars[random.Next(chars.Length)]);
         }
 
         Console.ForegroundColor = ConsoleColor.Green;
