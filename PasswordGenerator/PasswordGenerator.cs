@@ -22,6 +22,8 @@ class PasswordGenerator
         Console.WriteLine("You can use the generated password for securing your accounts. \n");
         Thread.Sleep(1000);
 
+        Random random = new Random();
+        string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
     }
 }
