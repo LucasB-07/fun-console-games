@@ -34,6 +34,15 @@ class PasswordGenerator
             password += chars[random.Next(chars.Length)];
         }
 
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n✅ | Password is generating");
+        for (int j = 0; j < 13; j += 1)
+        {
+            Thread.Sleep(500);
+            Console.Write(".");
+        }
+        Console.ResetColor();
+
 
     }
 }
