@@ -22,8 +22,6 @@ class PasswordGenerator
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
-        Random random = new Random();
-
         Console.Write("How long do you want your Password to be?: ");
         int length;
         while (!int.TryParse(Console.ReadLine(), out length) || length <= 0)
@@ -36,6 +34,14 @@ class PasswordGenerator
         Console.Write("Do you want to include special characters? (yes/no): ");
         string includeSpecialChars = Console.ReadLine().Trim().ToLower();
 
+        string chars;
+        if (includeSpecialChars == "yes" || includeSpecialChars == "y")
+        {
+            chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>?";
+        }
+
+
+        Random random = new Random();
         string password = "";
         for (int i = 0; i < length; i += 1)
         {
