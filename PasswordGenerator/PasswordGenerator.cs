@@ -91,7 +91,6 @@ class PasswordGenerator
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid input! Exiting the program.");
                 Console.ResetColor();
-                generateAgain = false;
             }
         }
         Console.WriteLine("Thank you for using the Password Generator!");
