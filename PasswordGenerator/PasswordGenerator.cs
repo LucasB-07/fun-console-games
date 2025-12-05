@@ -76,22 +76,26 @@ class PasswordGenerator
             Console.ResetColor();
 
             //while loop to ask user if they want to generate another password:
-            Console.Write("\nDo you want to generate another password? (yes/no): ");
-            var answer = Console.ReadLine().ToLower().Trim();
-            if (answer == "yes" || answer == "y")
+            while (true)
             {
-                generateAgain = true;
+                Console.Write("\nDo you want to generate another password? (yes/no): ");
+                var answer = Console.ReadLine().ToLower().Trim();
+                if (answer == "yes" || answer == "y")
+                {
+                    generateAgain = true;
+                }
+                else if (answer == "no" || answer == "n")
+                {
+                    generateAgain = false;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid input! Exiting the program");
+                    Console.ResetColor();
+                }
             }
-            else if (answer == "no" || answer == "n")
-            {
-                generateAgain = false;
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Invalid input! Exiting the program.");
-                Console.ResetColor();
-            }
+
         }
         Console.WriteLine("Thank you for using the Password Generator!");
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
