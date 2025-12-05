@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using System.Globalization;
 using System.Text;
+using System.Security.Cryptography;
 
 class PasswordGenerator
 {
