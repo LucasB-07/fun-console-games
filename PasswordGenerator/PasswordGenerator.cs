@@ -9,12 +9,6 @@ using System.Globalization;
 using System.Text;
 using System.Security.Cryptography;
 
-using System;
-using System.Threading;
-using System.Globalization;
-using System.Text;
-using System.Security.Cryptography;
-
 class PasswordGenerator
 {
     static void Main()
