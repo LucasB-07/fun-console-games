@@ -83,6 +83,7 @@ class PasswordGenerator
                 if (answer == "yes" || answer == "y")
                 {
                     generateAgain = true;
+                    break;
                 }
                 else if (answer == "no" || answer == "n")
                 {
