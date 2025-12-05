@@ -75,7 +75,6 @@ class PasswordGenerator
             Console.WriteLine(passwordBuilder.ToString());
             Console.ResetColor();
 
-            //while loop to ask user if they want to generate another password:
             while (true)
             {
                 Console.Write("\nDo you want to generate another password? (yes/no): ");
