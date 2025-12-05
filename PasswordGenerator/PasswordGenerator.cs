@@ -93,7 +93,7 @@ class PasswordGenerator
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalid input! Exiting the program");
+                    Console.WriteLine("Invalid input! Type 'yes' or 'no'.");
                     Console.ResetColor();
                 }
             }
