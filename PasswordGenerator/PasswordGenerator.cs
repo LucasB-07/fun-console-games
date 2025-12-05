@@ -55,7 +55,6 @@ class PasswordGenerator
                 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             }
 
-            Random random = new Random();
             StringBuilder passwordBuilder = new StringBuilder(length);
             for (int i = 0; i < length; i += 1)
             {
