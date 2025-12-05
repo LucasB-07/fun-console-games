@@ -19,7 +19,9 @@ class PasswordGenerator
         Thread.Sleep(1000);
         Console.WriteLine("This application generates a random password based on the length you specify.");
         Thread.Sleep(1000);
-        Console.WriteLine("You can use the generated password for securing your accounts. \n");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("This project is intended solely for educational and developmental purposes. It is not designed or suitable for real-world, production, or security-critical use. The author accepts no responsibility or liability for any consequences arising from the use of this software. Use at your own discretion and risk.\n");
+        Console.ResetColor();
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
