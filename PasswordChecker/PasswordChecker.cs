@@ -50,6 +50,11 @@ class PasswordChecker
                 score += 30;
                 feedback += "✅ Excellent length (16+ characters).\n";
             }
+            else if (password.Length >= 12)
+            {
+                score += 25;
+                feedback += "✅ Good length (12-15 characters).\n";
+            }
 
         }
     }
