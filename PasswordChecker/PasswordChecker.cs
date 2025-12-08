@@ -35,5 +35,29 @@ class PasswordChecker
             string password = ReadPassword();
         }
     }
-
+    
+    static string ReadPassword()
+    {
+        var password = new StringBuilder();
+        while(true)
+        {
+            var key = Console.ReadKey(true);
+            if (key.Key == ConsoleKey.Enter)
+            {
+                break;
+            }
+            if (key.Key == ConsoleKey.Backspace && password.Length > 0)
+            {
+                password.Length -= 1;
+                Console.Write("\b \b");
+            }
+            else if (!char.IsControl(key.KeyChar))
+            {
+                password.Append(key.KeyChar);
+                Console.Write("*");
+            }
+        }
+        Console.WriteLine();
+        return password.ToString();
+    }
 }
