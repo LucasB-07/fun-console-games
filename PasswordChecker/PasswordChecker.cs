@@ -27,5 +27,7 @@ class PasswordChecker
         Console.ResetColor();
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - 🔐 Password Checker 🔐 - - - - - - - - >");
+
+        bool checkAgain = true;
     }
 }
