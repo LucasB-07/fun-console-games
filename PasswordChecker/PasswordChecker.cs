@@ -55,6 +55,11 @@ class PasswordChecker
                 score += 25;
                 feedback += "✅ Good length (12-15 characters).\n";
             }
+            else if (password.Length >= 8)
+            {
+                score += 10;
+                feedback += "⚠️ Fair length (8-11 characters). Consider using a longer password.\n";
+            }
 
         }
     }
