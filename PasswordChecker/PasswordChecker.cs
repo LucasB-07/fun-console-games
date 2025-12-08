@@ -98,6 +98,12 @@ class PasswordChecker
             }
 
             //4. Digits
+            if (Regex.IsMatch(password, @"\d"))
+            {
+                score += 15;
+                
+            }
+            
         }
     }
     
