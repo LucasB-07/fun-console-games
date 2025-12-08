@@ -29,5 +29,11 @@ class PasswordChecker
         Console.WriteLine("< - - - - - - - - 🔐 Password Checker 🔐 - - - - - - - - >");
 
         bool checkAgain = true;
+        while (checkAgain)
+        {
+            Console.Write("Enter a password to check its strength:");
+            string password = ReadPassword();
+        }
     }
+
 }
