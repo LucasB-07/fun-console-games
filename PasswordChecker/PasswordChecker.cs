@@ -60,7 +60,10 @@ class PasswordChecker
                 score += 10;
                 feedback += "⚠️ Fair length (8-11 characters). Consider using a longer password.\n";
             }
-
+            else
+            {score += 5;
+                feedback += "❌ Poor length (<8 characters). Use a longer password.\n";
+            }
         }
     }
     
