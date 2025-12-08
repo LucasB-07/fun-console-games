@@ -81,6 +81,11 @@ class PasswordChecker
                 feedback += "❌ No uppercase letters. Consider adding some.\n";
             }
             
+            //3. Lowercase Letters
+            if (Regex.IsMatch(password, @"[a-z]"))
+            {
+                score += 15;
+            }
         }
     }
     
