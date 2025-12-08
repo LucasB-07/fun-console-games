@@ -43,6 +43,14 @@ class PasswordChecker
             }
             int score = 0;
             string feedback = "";
+
+            //1. Length
+            if (password.Length >= 16)
+            {
+                score += 30;
+                feedback += "✅ Excellent length (16+ characters).\n";
+            }
+
         }
     }
     
