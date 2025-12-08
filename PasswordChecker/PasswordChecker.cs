@@ -112,6 +112,7 @@ class PasswordChecker
             {
                 feedback += "❌ No digits. Consider adding some.\n";
             }
+            //5. Special Characters
         }
     }
     
