@@ -41,6 +41,8 @@ class PasswordChecker
                 Console.ResetColor();
                 continue;
             }
+            int score = 0;
+            string feedback = "";
         }
     }
     
