@@ -139,6 +139,8 @@ class PasswordChecker
             score = Math.Clamp(score, 0, 100);
 
             //Results
+            Console.WriteLine("\n" + new string('=', 60));
+            Console.Write($"Password Strength: ");
         }
     }
     
