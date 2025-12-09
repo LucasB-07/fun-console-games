@@ -169,6 +169,10 @@ class PasswordChecker
             }
             Console.ResetColor();    
             Console.WriteLine($"Score: {score}/100");
+            if (!string.IsNullOrEmpty(feedback.Trim()))
+            {
+                Console.WriteLine($"\nFeedback: {feedback.Trim()}");
+            }
         }
     }
     
