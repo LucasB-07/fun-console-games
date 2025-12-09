@@ -128,7 +128,12 @@ class PasswordChecker
                 feedback += "❌ No special characters. Consider adding some.\n";
             }
 
-
+            //6. Common Patterns
+            if (Regex.IsMatch(password, @"^(123456|password|qwerty|!@#$%^&*()_|letmein|welcome|admin|iloveyou|abc123|111111|123123)$", RegexOptions.IgnoreCase))
+            {
+                score -= 20;
+                feedback += "❌ Contains common patterns. Avoid using easily guessable passwords.\n";
+            }
         }
     }
     
