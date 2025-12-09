@@ -130,7 +130,7 @@ class PasswordChecker
             }
 
             //6. Common Patterns
-            if (Regex.IsMatch(password, @"^(123456|password|qwerty|!@#$%^&*()_|letmein|welcome|admin|iloveyou|abc123|111111|123123)$", RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(password, @"^(123456|password|qwerty|!@#$%^&*()_|letmein|welcome|admin|iloveyou|token|secret|wasd|abc123|111111|123123)$", RegexOptions.IgnoreCase))
             {
                 score -= 20;
                 feedback += "❌ | Contains common patterns. Avoid using easily guessable passwords.\n";
