@@ -154,6 +154,12 @@ class PasswordChecker
                 Console.WriteLine("STRONG");
                 Console.ResetColor();
             }
+            else if (score >= 60)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("MEDIUM");
+                Console.ResetColor();
+            }
         }
     }
     
