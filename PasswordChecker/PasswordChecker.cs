@@ -167,7 +167,8 @@ class PasswordChecker
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("VERY WEAK");
             }
-            Console.ResetColor();            
+            Console.ResetColor();    
+            Console.WriteLine($"Score: {score}/100");
         }
     }
     
