@@ -163,11 +163,11 @@ namespace DiceGame
                     Console.Write("Do you want to play again? (yes/no): ");
                     var answer = Console.ReadLine().ToLower();
 
-                    if (answer == "yes")
+                    if (answer == "yes" || answer == "y")
                     {
                         break;
                     }
-                    else if (answer == "no")
+                    else if (answer == "no" || answer == "n")
                     {
                         playAgain = false;
                         break;
