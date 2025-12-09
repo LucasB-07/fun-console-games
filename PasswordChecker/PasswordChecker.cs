@@ -177,7 +177,14 @@ class PasswordChecker
 
             while (true)
             {
+                Console.Write("Do you want to check another password? (yes/no):");
+                var answer = Console.ReadLine().ToLower().Trim();
                 
+                if (answer == "yes" || answer == "y")
+                {
+                    checkAgain = true;
+                    break;
+                }
             }
         }
     }
