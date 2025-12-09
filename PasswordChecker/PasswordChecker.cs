@@ -26,7 +26,7 @@ class PasswordChecker
         Console.WriteLine("This project is intended solely for educational and developmental purposes. It is not designed or suitable for real-world, production, operational or security-critical use. The author accepts no responsibility or liability for any consequences arising from misuse. MUST NOT BE USED IN PRODUCTION OR SECURITY-CRITICAL SYSTEMS.\n");
         Console.ResetColor();
         Thread.Sleep(1000);
-        Console.WriteLine("< - - - - - - - - 🔐 Password Checker 🔐 - - - - - - - - >");
+        Console.WriteLine("< - - - - - - - - - - - - - - - - - - -  - - - - - - - - >");
 
         bool checkAgain = true;
         while (checkAgain)
@@ -48,21 +48,21 @@ class PasswordChecker
             if (password.Length >= 16)
             {
                 score += 30;
-                feedback += "✅ Excellent length (16+ characters).\n";
+                feedback += "✅ Contains excellent length (16+ characters).\n";
             }
             else if (password.Length >= 12)
             {
                 score += 25;
-                feedback += "✅ Good length (12-15 characters).\n";
+                feedback += "✅ Contains good length (12-15 characters).\n";
             }
             else if (password.Length >= 8)
             {
                 score += 10;
-                feedback += "⚠️ Fair length (8-11 characters). Consider using a longer password.\n";
+                feedback += "⚠️ Contains fair length (8-11 characters). Consider using a longer password.\n";
             }
             else
             {score += 5;
-                feedback += "❌ Poor length (<8 characters). Use a longer password.\n";
+                feedback += "❌ Contains poor length (<8 characters). Use a longer password.\n";
             }
 
             //2. Uppercase Letters
@@ -171,7 +171,7 @@ class PasswordChecker
             Console.WriteLine($"Score: {score}/100");
             if (!string.IsNullOrEmpty(feedback.Trim()))
             {
-                Console.WriteLine($"\nFeedback: {feedback.Trim()}");
+                Console.WriteLine($"\nFeedback: \n{feedback.Trim()}");
             }
             Console.WriteLine(new string('=', 60) + "\n");
 
