@@ -174,6 +174,11 @@ class PasswordChecker
                 Console.WriteLine($"\nFeedback: {feedback.Trim()}");
             }
             Console.WriteLine(new string('=', 60) + "\n");
+
+            while (true)
+            {
+                
+            }
         }
     }
     
