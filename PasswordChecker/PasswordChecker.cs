@@ -48,21 +48,21 @@ class PasswordChecker
             if (password.Length >= 16)
             {
                 score += 30;
-                feedback += "✅ Contains excellent length (16+ characters).\n";
+                feedback += "✅ | Contains excellent length (16+ characters).\n";
             }
             else if (password.Length >= 12)
             {
                 score += 25;
-                feedback += "✅ Contains good length (12-15 characters).\n";
+                feedback += "✅ | Contains good length (12-15 characters).\n";
             }
             else if (password.Length >= 8)
             {
                 score += 10;
-                feedback += "⚠️ Contains fair length (8-11 characters). Consider using a longer password.\n";
+                feedback += "⚠️ | Contains fair length (8-11 characters). Consider using a longer password.\n";
             }
             else
             {score += 5;
-                feedback += "❌ Contains poor length (<8 characters). Use a longer password.\n";
+                feedback += "❌ | Contains poor length (<8 characters). Use a longer password.\n";
             }
 
             //2. Uppercase Letters
