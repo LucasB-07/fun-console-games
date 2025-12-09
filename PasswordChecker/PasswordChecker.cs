@@ -88,13 +88,13 @@ class PasswordChecker
                 if (Regex.IsMatch(password, @"(?=.*[a-z].*[a-z])"))
                 {
                     score += 5;
-                    feedback += "✅ Contains multiple lowercase letters.\n";
+                    feedback += "✅ | Contains multiple lowercase letters.\n";
                 }
-                feedback += "✅ Contains lowercase letter.\n";
+                feedback += "✅ | Contains lowercase letter.\n";
             }
             else
             {
-                feedback += "❌ No lowercase letters. Consider adding some.\n";
+                feedback += "❌ | No lowercase letters. Consider adding some.\n";
             }
 
             //4. Digits
