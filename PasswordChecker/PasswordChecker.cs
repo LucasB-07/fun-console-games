@@ -134,6 +134,11 @@ class PasswordChecker
                 score -= 20;
                 feedback += "❌ Contains common patterns. Avoid using easily guessable passwords.\n";
             }
+
+            // Keep the score between 0 and 100
+            score = Math.Clamp(score, 0, 100);
+
+            //Results
         }
     }
     
