@@ -113,6 +113,17 @@ class PasswordChecker
                 feedback += "❌ No digits. Consider adding some.\n";
             }
             //5. Special Characters
+            if (Regex.IsMatch(password, @"[\W_]"))
+            {
+                score += 15;
+                if (Regex.IsMatch(password, @"(?=(.*[\W_]){2,})"))
+                {
+                    score += 5;
+                    feedback += "✅ Contains multiple special characters.\n";
+                }
+                feedback += "✅ Contains special character.\n";
+            }
+
         }
     }
     
