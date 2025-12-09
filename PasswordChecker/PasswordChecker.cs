@@ -185,6 +185,11 @@ class PasswordChecker
                     checkAgain = true;
                     break;
                 }
+                else if (answer == "no" || answer == "n")
+                {
+                    checkAgain = false;
+                    break;
+                }
             }
         }
     }
