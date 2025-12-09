@@ -120,20 +120,20 @@ class PasswordChecker
                 if (Regex.IsMatch(password, @"(?=(.*[\W_]){2,})"))
                 {
                     score += 5;
-                    feedback += "✅ Contains multiple special characters.\n";
+                    feedback += "✅ | Contains multiple special characters.\n";
                 }
-                feedback += "✅ Contains special character.\n";
+                feedback += "✅ | Contains special character.\n";
             }
             else
             {
-                feedback += "❌ No special characters. Consider adding some.\n";
+                feedback += "❌ | No special characters. Consider adding some.\n";
             }
 
             //6. Common Patterns
             if (Regex.IsMatch(password, @"^(123456|password|qwerty|!@#$%^&*()_|letmein|welcome|admin|iloveyou|abc123|111111|123123)$", RegexOptions.IgnoreCase))
             {
                 score -= 20;
-                feedback += "❌ Contains common patterns. Avoid using easily guessable passwords.\n";
+                feedback += "❌ | Contains common patterns. Avoid using easily guessable passwords.\n";
             }
 
             // Keep the score between 0 and 100
