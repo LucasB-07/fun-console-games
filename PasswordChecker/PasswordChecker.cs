@@ -104,14 +104,15 @@ class PasswordChecker
                 if (Regex.IsMatch(password, @"(?=(.*\d){2,})"))
                 {
                     score += 5;
-                    feedback += "✅ Contains multiple digits.\n";
+                    feedback += "✅ | Contains multiple digits.\n";
                 }
-                feedback += "✅ Contains digit.\n";
+                feedback += "✅ | Contains digit.\n";
             }
             else
             {
-                feedback += "❌ No digits. Consider adding some.\n";
+                feedback += "❌ | No digits. Consider adding some.\n";
             }
+            
             //5. Special Characters
             if (Regex.IsMatch(password, @"[\W_]"))
             {
