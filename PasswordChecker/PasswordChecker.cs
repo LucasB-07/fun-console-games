@@ -198,6 +198,9 @@ class PasswordChecker
                 }
             }
         }
+        Console.WriteLine("Thank you for using the Password Checker!");
+        Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
+        Thread.Sleep(1000);
     }
     
     static string ReadPassword()
