@@ -146,32 +146,28 @@ class PasswordChecker
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("VERY STRONG");
-                Console.ResetColor();
             }
             else if (score >= 75)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("STRONG");
-                Console.ResetColor();
             }
             else if (score >= 60)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("MEDIUM");
-                Console.ResetColor();
             }
             else if(score >= 40)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("WEAK");
-                Console.ResetColor();
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("VERY WEAK");
-                Console.ResetColor();
             }
+            Console.ResetColor();            
         }
     }
     
