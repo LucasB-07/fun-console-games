@@ -115,6 +115,13 @@ class PasswordTools
                 Console.Write(".");
             }
             Console.ResetColor();
+
+            Console.Write($"\rGenerated Password: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(passwordBuilder.ToString());
+            Console.ResetColor();
+
+            
         }
     }
 }
