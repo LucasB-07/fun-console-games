@@ -19,5 +19,10 @@ class PasswordTools
         CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
         Console.Title = "Password Tools";
+
+        while(true)
+        {
+            
+        }
     }
 }
