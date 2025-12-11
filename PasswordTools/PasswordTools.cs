@@ -48,6 +48,12 @@ class PasswordTools
                 // Future Method
                 RunPasswordChecker();
             }
+            else if (choice == "3")
+            {
+                Console.WriteLine("Exiting Password Tools. Goodbye!");
+                Thread.Sleep(700);
+                break;
+            }
         }
     }
 }
