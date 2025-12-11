@@ -125,6 +125,11 @@ class PasswordTools
             {
                 Console.Write("\nDo you want to generate another password? (yes/no): ");
                 var answer = Console.ReadLine().ToLower().Trim();
+                if (answer == "yes" || answer == "y")
+                {
+                    generateAgain = true;
+                    break;
+                }
 
             }
 
