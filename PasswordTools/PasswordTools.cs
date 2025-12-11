@@ -67,7 +67,7 @@ class PasswordTools
 
     static void RunPasswordGenerator()
     {
-                bool generateAgain = true;
+        bool generateAgain = true;
         while (generateAgain)
         {
             Console.Write("How long do you want your Password to be?: ");
@@ -78,6 +78,12 @@ class PasswordTools
                 Console.Write("❌ | Invalid input. Please enter a positive number: ");
                 Console.ResetColor();
             }
+
+            
+            Console.Write("Do you want to include special characters? (yes/no): ");
+            string includeSpecialChars = Console.ReadLine().Trim().ToLower();
+
+            
         }
     }
 }
