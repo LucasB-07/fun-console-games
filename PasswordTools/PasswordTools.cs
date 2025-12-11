@@ -83,7 +83,12 @@ class PasswordTools
             Console.Write("Do you want to include special characters? (yes/no): ");
             string includeSpecialChars = Console.ReadLine().Trim().ToLower();
 
-            
+            string chars;
+            if (includeSpecialChars == "yes" || includeSpecialChars == "y")
+            {
+                chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
+            }
+
         }
     }
 }
