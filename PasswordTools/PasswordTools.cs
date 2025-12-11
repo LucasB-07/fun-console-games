@@ -130,6 +130,11 @@ class PasswordTools
                     generateAgain = true;
                     break;
                 }
+                else if (answer == "no" || answer == "n")
+                {
+                    generateAgain = false;
+                    break;
+                }
 
             }
 
