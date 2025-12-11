@@ -54,6 +54,13 @@ class PasswordTools
                 Thread.Sleep(700);
                 break;
             }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("❌ Invalid choice. Press any key to try again...");
+                Console.ResetColor();
+                Console.ReadKey();
+            }
         }
     }
 }
