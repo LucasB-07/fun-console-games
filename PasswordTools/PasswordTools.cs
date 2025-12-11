@@ -43,7 +43,11 @@ class PasswordTools
                 // Future Method
                 RunPasswordGenerator();
             }
-            
+            else if (choice == "2")
+            {
+                // Future Method
+                RunPasswordChecker();
+            }
         }
     }
 }
