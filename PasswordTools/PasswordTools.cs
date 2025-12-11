@@ -99,6 +99,13 @@ class PasswordTools
                 Console.ResetColor();
                 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             }
+
+            StringBuilder passwordBuilder = new StringBuilder(length);
+            for (int i = 0; i < length; i += 1)
+            {
+                int index = RandomNumberGenerator.GetInt32(chars.Length);
+                passwordBuilder.Append(chars[index]);
+            }
         }
     }
 }
