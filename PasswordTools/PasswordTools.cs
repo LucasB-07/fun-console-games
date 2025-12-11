@@ -135,7 +135,12 @@ class PasswordTools
                     generateAgain = false;
                     break;
                 }
-
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid input! Type 'yes' or 'no'.");
+                    Console.ResetColor();
+                }
             }
 
         }
