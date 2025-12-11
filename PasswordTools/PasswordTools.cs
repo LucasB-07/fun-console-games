@@ -120,8 +120,14 @@ class PasswordTools
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(passwordBuilder.ToString());
             Console.ResetColor();
-
             
+            while (true)
+            {
+                Console.Write("\nDo you want to generate another password? (yes/no): ");
+                var answer = Console.ReadLine().ToLower().Trim();
+
+            }
+
         }
     }
 }
