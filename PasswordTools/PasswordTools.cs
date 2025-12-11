@@ -62,5 +62,11 @@ class PasswordTools
                 Console.ReadKey();
             }
         }
+        Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
+    }
+
+    static void RunPasswordGenerator()
+    {
+        
     }
 }
