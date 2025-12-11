@@ -106,6 +106,15 @@ class PasswordTools
                 int index = RandomNumberGenerator.GetInt32(chars.Length);
                 passwordBuilder.Append(chars[index]);
             }
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n✅ | Password is generating");
+            for (int j = 0; j < 13; j += 1)
+            {
+                Thread.Sleep(500);
+                Console.Write(".");
+            }
+            Console.ResetColor();
         }
     }
 }
