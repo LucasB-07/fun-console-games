@@ -22,6 +22,19 @@ class PasswordTools
 
         while(true)
         {
+            Console.Clear();
+            Console.WriteLine("< - - - - - - - - 🔐 Password Tools 🔐 - - - - - - - - >");
+            Thread.Sleep(500);
+            Console.WriteLine("Choose an option:");
+            Thread.Sleep(500);
+            Console.WriteLine("1. Password Generator");
+            Thread.Sleep(300);
+            Console.WriteLine("2. Password Checker");
+            Thread.Sleep(300);
+            Console.WriteLine("3. Exit");
+            Thread.Sleep(500);
+            Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
+
             
         }
     }
