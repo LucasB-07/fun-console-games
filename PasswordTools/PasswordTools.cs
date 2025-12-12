@@ -67,6 +67,10 @@ class PasswordTools
 
     static void RunPasswordGenerator()
     {
+        Console.Title = "Password Generator";
+
+
+
         bool generateAgain = true;
         while (generateAgain)
         {
