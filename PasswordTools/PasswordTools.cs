@@ -313,6 +313,13 @@ class PasswordTools
             }
             Console.WriteLine(new string('=', 60) + "\n");
 
+            while (true)
+            {
+                Console.Write("Do you want to check another password? (yes/no):");
+                var answer = Console.ReadLine().ToLower().Trim();
+                
+
+            }
         }
     }
 }
