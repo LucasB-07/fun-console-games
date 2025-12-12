@@ -151,6 +151,6 @@ class PasswordTools
 
     static void RunPasswordChecker()
     {
-        
+        Console.Title = "Password Checker";
     }
 }
