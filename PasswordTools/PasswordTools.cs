@@ -311,6 +311,8 @@ class PasswordTools
             {
                 Console.WriteLine($"\nFeedback: \n{feedback.Trim()}");
             }
+            Console.WriteLine(new string('=', 60) + "\n");
+
         }
     }
 }
