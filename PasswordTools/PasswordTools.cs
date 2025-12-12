@@ -178,10 +178,8 @@ class PasswordTools
                 Console.ResetColor();
                 continue;
             }
-
             int score = 0;
             string feedback = "";
-
 
             //1. Length
             if (password.Length >= 16)
