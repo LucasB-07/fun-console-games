@@ -289,6 +289,11 @@ class PasswordTools
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("STRONG");
             }
+            else if (score >= 60)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("MEDIUM");
+            }
 
         }
     }
