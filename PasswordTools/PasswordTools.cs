@@ -234,6 +234,18 @@ class PasswordTools
                 feedback += "❌ | No lowercase letters. Consider adding some.\n";
             }
 
+            //4. Digits
+            if (Regex.IsMatch(password, @"\d"))
+            {
+                score += 15;
+                if (Regex.IsMatch(password, @"(?=(.*\d){2,})"))
+                {
+                    score += 5;
+                    feedback += "✅ | Contains multiple digits.\n";
+                }
+                feedback += "✅ | Contains digit.\n";
+            }
+
         }
     }
 }
