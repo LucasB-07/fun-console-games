@@ -194,6 +194,11 @@ class PasswordTools
                 score += 25;
                 feedback += "✅ | Contains good length (12-15 characters).\n";
             }
+            else if (password.Length >= 8)
+            {
+                score += 10;
+                feedback += "⚠️ | Contains fair length (8-11 characters). Consider using a longer password.\n";
+            }
 
 
         }
