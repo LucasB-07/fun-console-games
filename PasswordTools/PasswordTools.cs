@@ -37,15 +37,14 @@ class PasswordTools
 
             Console.Write("Enter your choice (1-3): ");
             string choice = Console.ReadLine().Trim();
+            
 
             if (choice == "1")
             {
-                // Future Method
                 RunPasswordGenerator();
             }
             else if (choice == "2")
             {
-                // Future Method
                 RunPasswordChecker();
             }
             else if (choice == "3")
