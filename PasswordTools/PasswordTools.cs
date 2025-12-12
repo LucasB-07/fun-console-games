@@ -261,7 +261,10 @@ class PasswordTools
                 }
                 feedback += "✅ | Contains special character.\n";
             }
-
+            else
+            {
+                feedback += "❌ | No special characters. Consider adding some.\n";
+            }
         }
     }
 }
