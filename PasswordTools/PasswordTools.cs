@@ -182,6 +182,15 @@ class PasswordTools
             int score = 0;
             string feedback = "";
 
+
+            //1. Length
+            if (password.Length >= 16)
+            {
+                score += 30;
+                feedback += "✅ | Contains excellent length (16+ characters).\n";
+            }
+
+
         }
     }
 }
