@@ -199,7 +199,10 @@ class PasswordTools
                 score += 10;
                 feedback += "⚠️ | Contains fair length (8-11 characters). Consider using a longer password.\n";
             }
-
+            else
+            {score += 5;
+                feedback += "❌ | Contains poor length (<8 characters). Use a longer password.\n";
+            }
 
         }
     }
