@@ -149,5 +149,8 @@ class PasswordTools
         Console.ReadKey();
     }
 
-
+    static void RunPasswordChecker()
+    {
+        
+    }
 }
