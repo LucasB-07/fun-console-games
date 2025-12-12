@@ -304,6 +304,9 @@ class PasswordTools
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("VERY WEAK");
             }
+            Console.ResetColor();
+            
+            Console.WriteLine($"Score: {score}/100");
         }
     }
 }
