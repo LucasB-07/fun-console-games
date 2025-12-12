@@ -272,6 +272,9 @@ class PasswordTools
                 score -= 20;
                 feedback += "❌ | Contains common patterns. Avoid using easily guessable passwords.\n";
             }
+
+            score = Math.Clamp(score, 0, 100);
+
         }
     }
 }
