@@ -165,6 +165,13 @@ class PasswordTools
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - -  - - - - - - - - >");
 
-        
+        bool checkAgain = true;
+        while (checkAgain)
+        {
+            Console.Write("Enter a password to check its strength:");
+            string password = ReadPassword();
+
+            
+        }
     }
 }
