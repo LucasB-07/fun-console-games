@@ -178,6 +178,10 @@ class PasswordTools
                 Console.ResetColor();
                 continue;
             }
+
+            int score = 0;
+            string feedback = "";
+
         }
     }
 }
