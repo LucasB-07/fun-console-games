@@ -299,7 +299,11 @@ class PasswordTools
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("WEAK");
             }
-
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("VERY WEAK");
+            }
         }
     }
 }
