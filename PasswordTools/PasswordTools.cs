@@ -305,8 +305,12 @@ class PasswordTools
                 Console.WriteLine("VERY WEAK");
             }
             Console.ResetColor();
-            
+
             Console.WriteLine($"Score: {score}/100");
+            if (!string.IsNullOrEmpty(feedback.Trim()))
+            {
+                Console.WriteLine($"\nFeedback: \n{feedback.Trim()}");
+            }
         }
     }
 }
