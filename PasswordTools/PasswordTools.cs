@@ -213,7 +213,10 @@ class PasswordTools
                 }
                 feedback += "✅ | Contains uppercase letter.\n";
             }
-
+            else
+            {
+                feedback += "❌ | No uppercase letters. Consider adding some.\n";
+            }
         }
     }
 }
