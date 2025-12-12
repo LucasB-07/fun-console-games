@@ -142,7 +142,12 @@ class PasswordTools
                     Console.ResetColor();
                 }
             }
-
         }
+        Console.WriteLine("Thank you for using the Password Generator!");
+        Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
+        Console.WriteLine("Press any key to return to the main menu...");
+        Console.ReadKey();
     }
+
+
 }
