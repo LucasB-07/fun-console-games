@@ -262,23 +262,6 @@ class PasswordTools
                 feedback += "❌ | No digits. Consider adding some.\n";
             }
 
-
-            // //5. Special Characters
-            // if (Regex.IsMatch(password, @"[\W_]"))
-            // {
-            //     score += 15;
-            //     if (Regex.IsMatch(password, @"(?=(.*[\W_]){2,})"))
-            //     {
-            //         score += 5;
-            //         feedback += "✅ | Contains multiple special characters.\n";
-            //     }
-            //     feedback += "✅ | Contains special character.\n";
-            // }
-            // else
-            // {
-            //     feedback += "❌ | No special characters. Consider adding some.\n";
-            // }
-
             //TODO: update the Special Characters to be optional in the next version
             if (Regex.IsMatch(password, @"(?=.*[\W_]){2,}"))
             {
