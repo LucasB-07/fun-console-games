@@ -233,6 +233,8 @@ class PasswordTools
             //TODO: update the Uppercase Letters to be optional in the next version
             if (Regex.IsMatch(password, @"[A-Z]"))
             {
+                score += 15;
+                feedback += "✅ | Contains uppercase letter.\n";
             }
 
             //3. Lowercase Letters
