@@ -270,7 +270,8 @@ class PasswordTools
             }
             else if (Regex.IsMatch(password, @"\d"))
             {
-                
+                score += 15;
+                feedback += "✅ | Contains digit.\n";
             }
 
 
