@@ -257,6 +257,10 @@ class PasswordTools
                 score += 15;
                 feedback += "✅ | Contains lowercase letter.\n";
             }
+            else
+            {
+                
+            }
 
             //4. Digits
             if (Regex.IsMatch(password, @"\d"))
