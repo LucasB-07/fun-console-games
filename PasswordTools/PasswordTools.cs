@@ -92,7 +92,6 @@ class PasswordTools
                 Console.ResetColor();
             }
 
-            
             Console.Write("Do you want to include special characters? (yes/no): ");
             string includeSpecialChars = Console.ReadLine().Trim().ToLower();
 
