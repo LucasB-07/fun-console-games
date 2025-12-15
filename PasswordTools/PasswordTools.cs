@@ -247,7 +247,9 @@ class PasswordTools
             // }
 
             //TODO: update the Lowercase Letters to be optional in the next version
-            
+            if (Regex.IsMatch(password, @"(?=.*[a-z].*[a-z])"))
+            {
+            }
 
             //4. Digits
             if (Regex.IsMatch(password, @"\d"))
