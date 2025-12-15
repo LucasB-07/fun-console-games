@@ -236,6 +236,9 @@ class PasswordTools
                 score += 15;
                 feedback += "✅ | Contains uppercase letter.\n";
             }
+            else if (Regex.IsMatch(password, @"(?=.*[A-Z].*[A-Z])"))
+            {
+            }
 
             //3. Lowercase Letters
             if (Regex.IsMatch(password, @"[a-z]"))
