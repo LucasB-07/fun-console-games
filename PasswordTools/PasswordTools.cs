@@ -230,21 +230,24 @@ class PasswordTools
                 feedback += "❌ | No uppercase letters. Consider adding some.\n";
             }
 
-            //3. Lowercase Letters
-            if (Regex.IsMatch(password, @"[a-z]"))
-            {
-                score += 15;
-                if (Regex.IsMatch(password, @"(?=.*[a-z].*[a-z])"))
-                {
-                    score += 5;
-                    feedback += "✅ | Contains multiple lowercase letters.\n";
-                }
-                feedback += "✅ | Contains lowercase letter.\n";
-            }
-            else
-            {
-                feedback += "❌ | No lowercase letters. Consider adding some.\n";
-            }
+            // //3. Lowercase Letters
+            // if (Regex.IsMatch(password, @"[a-z]"))
+            // {
+            //     score += 15;
+            //     if (Regex.IsMatch(password, @"(?=.*[a-z].*[a-z])"))
+            //     {
+            //         score += 5;
+            //         feedback += "✅ | Contains multiple lowercase letters.\n";
+            //     }
+            //     feedback += "✅ | Contains lowercase letter.\n";
+            // }
+            // else
+            // {
+            //     feedback += "❌ | No lowercase letters. Consider adding some.\n";
+            // }
+
+            //TODO: update the Lowercase Letters to be optional in the next version
+            
 
             //4. Digits
             if (Regex.IsMatch(password, @"\d"))
