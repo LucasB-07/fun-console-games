@@ -259,7 +259,7 @@ class PasswordTools
             }
             else
             {
-                
+                feedback += "❌ | No lowercase letters. Consider adding some.\n";
             }
 
             //4. Digits
