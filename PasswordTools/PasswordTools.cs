@@ -282,7 +282,8 @@ class PasswordTools
             //TODO: update the Special Characters to be optional in the next version
             if (Regex.IsMatch(password, @"(?=.*[\W_]){2,}"))
             {
-                
+                score += 20;
+                feedback += "✅ | Contains multiple special characters.\n";
             }
 
             //6. Common Patterns
