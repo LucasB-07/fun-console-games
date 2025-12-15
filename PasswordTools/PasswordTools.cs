@@ -287,8 +287,10 @@ class PasswordTools
             }
             else if (Regex.IsMatch(password, @"[\W_]"))
             {
-                
+                score += 15;
+                feedback += "✅ | Contains special character.\n";
             }
+
 
             //6. Common Patterns
             if (Regex.IsMatch(password, @"(123456|password|qwerty|!@#$%^&*()_|letmein|welcome|admin|iloveyou|token|secret|wasd|abc123|111111|123123|password123|lol|lol123|admin123|zxcvbn)", RegexOptions.IgnoreCase))
