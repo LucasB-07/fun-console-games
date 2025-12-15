@@ -275,7 +275,7 @@ class PasswordTools
             }
             else
             {
-                
+                feedback += "❌ | No digits. Consider adding some.\n";
             }
 
 
