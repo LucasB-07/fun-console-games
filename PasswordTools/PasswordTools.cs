@@ -243,6 +243,7 @@ class PasswordTools
             }
             else
             {
+                feedback += "❌ | No uppercase letters. Consider adding some.\n";
             }
 
             //3. Lowercase Letters
