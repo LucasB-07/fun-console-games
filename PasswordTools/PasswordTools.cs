@@ -214,32 +214,16 @@ class PasswordTools
                 feedback += "❌ | Contains poor length (<8 characters). Use a longer password.\n";
             }
 
-            // //2. Uppercase Letters
-            // if (Regex.IsMatch(password, @"[A-Z]"))
-            // {
-            //     score += 15;
-            //     if (Regex.IsMatch(password, @"(?=.*[A-Z].*[A-Z])"))
-            //     {
-            //         score += 5;
-            //         feedback += "✅ | Contains multiple uppercase letters.\n";
-            //     }
-            //     feedback += "✅ | Contains uppercase letter.\n";
-            // }
-            // else
-            // {
-            //     feedback += "❌ | No uppercase letters. Consider adding some.\n";
-            // }
-
             //TODO: update the Uppercase Letters to be optional in the next version
             if (Regex.IsMatch(password, @"(?=.*[A-Z].*[A-Z])"))
             {
                 score += 20;
-                feedback += "✅ | Contains uppercase letter.\n";
+                feedback += "✅ | Contains multiple uppercase letters.\n";
             }
             else if (Regex.IsMatch(password, @"[A-Z]"))
             {
                 score += 15;
-                feedback += "✅ | Contains multiple uppercase letters.\n";
+                feedback += "✅ | Contains uppercase letter.\n";
             }
             else
             {
