@@ -280,7 +280,10 @@ class PasswordTools
             // }
 
             //TODO: update the Special Characters to be optional in the next version
-            
+            if (Regex.IsMatch(password, @"(?=.*[\W_]){2,}"))
+            {
+                
+            }
 
             //6. Common Patterns
             if (Regex.IsMatch(password, @"(123456|password|qwerty|!@#$%^&*()_|letmein|welcome|admin|iloveyou|token|secret|wasd|abc123|111111|123123|password123|lol|lol123|admin123|zxcvbn)", RegexOptions.IgnoreCase))
