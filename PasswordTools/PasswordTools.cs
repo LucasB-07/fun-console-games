@@ -292,6 +292,7 @@ class PasswordTools
             }
             else
             {
+                feedback += "❌ | No special characters. Consider adding some.\n";
             }
 
             //6. Common Patterns
