@@ -247,7 +247,7 @@ class PasswordTools
             }
 
             //TODO: update the Digits to be optional in the next version
-            if (Regex.IsMatch(password, @"(?=.*\d){2,}"))
+            if (Regex.IsMatch(password, @"(?:\d.*){2,}"))
             {
                 score += 20;
                 feedback += "✅ | Contains multiple digits.\n";
@@ -263,7 +263,7 @@ class PasswordTools
             }
 
             //TODO: update the Special Characters to be optional in the next version
-            if (Regex.IsMatch(password, @"(?=.*[\W_]){2,}"))
+            if (Regex.IsMatch(password, @"(?:[\W_].*){2,}"))  
             {
                 score += 20;
                 feedback += "✅ | Contains multiple special characters.\n";
