@@ -254,7 +254,8 @@ class PasswordTools
             }
             else if (Regex.IsMatch(password, @"[a-z]"))
             {
-                
+                score += 15;
+                feedback += "✅ | Contains lowercase letter.\n";
             }
 
             //4. Digits
