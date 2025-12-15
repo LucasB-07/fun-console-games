@@ -273,6 +273,10 @@ class PasswordTools
                 score += 15;
                 feedback += "✅ | Contains digit.\n";
             }
+            else
+            {
+                
+            }
 
 
             //5. Special Characters
