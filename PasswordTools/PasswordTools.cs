@@ -268,6 +268,10 @@ class PasswordTools
                 score += 20;
                 feedback += "✅ | Contains multiple digits.\n";
             }
+            else if (Regex.IsMatch(password, @"\d"))
+            {
+                
+            }
 
 
             //5. Special Characters
