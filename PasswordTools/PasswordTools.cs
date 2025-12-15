@@ -263,7 +263,10 @@ class PasswordTools
             // }
 
             //TODO: update the Digits to be optional in the next version
-            
+            if (Regex.IsMatch(password, @"(?=.*\d){2,}"))
+            {
+            }
+
 
             //5. Special Characters
             if (Regex.IsMatch(password, @"[\W_]"))
