@@ -265,6 +265,8 @@ class PasswordTools
             //TODO: update the Digits to be optional in the next version
             if (Regex.IsMatch(password, @"(?=.*\d){2,}"))
             {
+                score += 20;
+                feedback += "✅ | Contains multiple digits.\n";
             }
 
 
