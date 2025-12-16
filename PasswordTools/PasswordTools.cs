@@ -79,7 +79,7 @@ class PasswordTools
         Console.Title = "Password Generator";
 
         Thread.Sleep(1000);
-        Console.WriteLine("Welcome to the Password Generator! Below is some information: ");
+        Console.WriteLine("\rWelcome to the Password Generator! Below is some information: ");
         Thread.Sleep(1000);
         Console.WriteLine("This application generates a random password based on the length you specify.");
         Thread.Sleep(1000);
