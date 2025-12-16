@@ -64,6 +64,7 @@ class PasswordTools
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write(".");
                 }
+                Console.ResetColor();
                 RunPasswordChecker();
             }
             else if (choice == "3")
