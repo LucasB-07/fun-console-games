@@ -174,7 +174,6 @@ class PasswordTools
     {
         Console.Title = "Password Checker";
 
-        Console.WriteLine("< - - - - - - - - 🔐 Password Checker 🔐 - - - - - - - - >");
         Thread.Sleep(1000);
         Console.WriteLine("Welcome to the Password Checker! Below is some information: ");
         Thread.Sleep(1000);
