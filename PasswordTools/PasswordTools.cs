@@ -67,6 +67,8 @@ class PasswordTools
     static void RunPasswordGenerator()
     {
         Console.Title = "Password Generator";
+
+        //Directing User To Password Generator
     
         Console.WriteLine("< - - - - - - - - 🔐 Password Generator 🔐 - - - - - - - - >");
         Thread.Sleep(1000);
