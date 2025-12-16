@@ -56,6 +56,7 @@ class PasswordTools
             else if (choice == "2")
             {
                 // Navigate to Password Checker
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 RunPasswordChecker();
             }
             else if (choice == "3")
