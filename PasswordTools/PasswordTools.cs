@@ -55,6 +55,7 @@ class PasswordTools
             }
             else if (choice == "2")
             {
+                // Navigate to Password Checker
                 RunPasswordChecker();
             }
             else if (choice == "3")
