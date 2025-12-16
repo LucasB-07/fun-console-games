@@ -55,7 +55,6 @@ class PasswordTools
             }
             else if (choice == "2")
             {
-                // Navigate to Password Checker
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("\nSending you to the Password Checker");
                 for ( int k = 0; k < 13; k +=1)
