@@ -41,6 +41,10 @@ class PasswordTools
 
             if (choice == "1")
             {
+                //Directing User To Password Generator
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\nSending you to the Password Generator");
+
                 RunPasswordGenerator();
             }
             else if (choice == "2")
@@ -67,11 +71,7 @@ class PasswordTools
     static void RunPasswordGenerator()
     {
         Console.Title = "Password Generator";
-
-        //Directing User To Password Generator
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("\nSending you to the Password Generator");
-
+        
         Thread.Sleep(1000);
         Console.WriteLine("Welcome to the Password Generator! Below is some information: ");
         Thread.Sleep(1000);
