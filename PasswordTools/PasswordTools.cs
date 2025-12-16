@@ -262,7 +262,7 @@ class PasswordTools
                 feedback += "❌ | No digits. Consider adding some.\n";
             }
 
-            //TODO: update the Special Characters to be optional in the next version
+            //5. Special Characters
             if (Regex.IsMatch(password, @"(?:[\W_].*){2,}"))  
             {
                 score += 20;
