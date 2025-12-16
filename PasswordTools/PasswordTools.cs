@@ -41,7 +41,6 @@ class PasswordTools
 
             if (choice == "1")
             {
-                //Directing User To Password Generator
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("\nSending you to the Password Generator");
                 
