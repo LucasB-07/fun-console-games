@@ -69,8 +69,8 @@ class PasswordTools
         Console.Title = "Password Generator";
 
         //Directing User To Password Generator
-    
-        Console.WriteLine("< - - - - - - - - 🔐 Password Generator 🔐 - - - - - - - - >");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+
         Thread.Sleep(1000);
         Console.WriteLine("Welcome to the Password Generator! Below is some information: ");
         Thread.Sleep(1000);
