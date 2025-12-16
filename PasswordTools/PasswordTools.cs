@@ -60,6 +60,9 @@ class PasswordTools
                 Console.WriteLine("\nSending you to the Password Checker");
                 for ( int k = 0; k < 13; k +=1)
                 {
+                    Thread.Sleep(200);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(".");
                 }
                 RunPasswordChecker();
             }
