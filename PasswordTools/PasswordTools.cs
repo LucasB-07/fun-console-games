@@ -214,7 +214,7 @@ class PasswordTools
                 feedback += "❌ | Contains poor length (<8 characters). Use a longer password.\n";
             }
 
-            //TODO: update the Uppercase Letters to be optional in the next version
+            //2. Uppercase Letters
             if (Regex.IsMatch(password, @"(?=.*[A-Z].*[A-Z])"))
             {
                 score += 20;
