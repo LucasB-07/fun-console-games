@@ -51,6 +51,7 @@ class PasswordTools
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write(".");
                 }
+                Console.ResetColor();
 
                 RunPasswordGenerator();
             }
