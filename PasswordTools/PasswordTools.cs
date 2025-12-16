@@ -44,6 +44,10 @@ class PasswordTools
                 //Directing User To Password Generator
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("\nSending you to the Password Generator");
+                
+                for ( int j = 0; j < 13; j += 1)
+                {
+                }
 
                 RunPasswordGenerator();
             }
@@ -71,7 +75,7 @@ class PasswordTools
     static void RunPasswordGenerator()
     {
         Console.Title = "Password Generator";
-        
+
         Thread.Sleep(1000);
         Console.WriteLine("Welcome to the Password Generator! Below is some information: ");
         Thread.Sleep(1000);
