@@ -52,7 +52,6 @@ class PasswordTools
                     Console.Write(".");
                 }
                 Console.ResetColor();
-
                 RunPasswordGenerator();
             }
             else if (choice == "2")
