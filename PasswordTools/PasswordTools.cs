@@ -246,7 +246,7 @@ class PasswordTools
                 feedback += "❌ | No lowercase letters. Consider adding some.\n";
             }
 
-            //TODO: update the Digits to be optional in the next version
+            //4. Digits
             if (Regex.IsMatch(password, @"(?:\d.*){2,}"))
             {
                 score += 20;
