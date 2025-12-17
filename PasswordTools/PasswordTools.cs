@@ -114,6 +114,8 @@ class PasswordTools
                     Thread.Sleep(700);
                     return;
                 default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
