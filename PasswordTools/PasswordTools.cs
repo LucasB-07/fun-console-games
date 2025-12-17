@@ -117,7 +117,8 @@ class PasswordTools
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("❌ Invalid choice. Press any key to try again...");
                     Console.ResetColor();
-
+                    Console.ReadKey();
+                    break;
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
