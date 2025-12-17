@@ -113,6 +113,7 @@ class PasswordTools
                     Console.WriteLine("Exiting Password Tools. Goodbye!");
                     Thread.Sleep(700);
                     return;
+                default:
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
