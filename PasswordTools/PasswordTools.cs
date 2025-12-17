@@ -99,6 +99,11 @@ class PasswordTools
                 case "2":
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("\nSending you to the Password Checker");
+
+                    for ( int k = 0; k < 13; k += 1)
+                    {
+                        
+                    }
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
