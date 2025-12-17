@@ -39,47 +39,6 @@ class PasswordTools
             string choice = Console.ReadLine().Trim();
             System.Console.WriteLine();
 
-            // if (choice == "1")
-            // {
-            //     Console.ForegroundColor = ConsoleColor.Yellow;
-            //     Console.WriteLine("\nSending you to the Password Generator");
-                
-            //     for ( int j = 0; j < 13; j += 1)
-            //     {
-            //         Thread.Sleep(200);
-            //         Console.ForegroundColor = ConsoleColor.Green;
-            //         Console.Write(".");
-            //     }
-            //     Console.ResetColor();
-            //     RunPasswordGenerator();
-            // }
-            // else if (choice == "2")
-            // {
-            //     Console.ForegroundColor = ConsoleColor.Yellow;
-            //     Console.WriteLine("\nSending you to the Password Checker");
-            //     for ( int k = 0; k < 13; k +=1)
-            //     {
-            //         Thread.Sleep(200);
-            //         Console.ForegroundColor = ConsoleColor.Green;
-            //         Console.Write(".");
-            //     }
-            //     Console.ResetColor();
-            //     RunPasswordChecker();
-            // }
-            // else if (choice == "3")
-            // {
-            //     Console.WriteLine("Exiting Password Tools. Goodbye!");
-            //     Thread.Sleep(700);
-            //     break;
-            // }
-            // else
-            // {
-            //     Console.ForegroundColor = ConsoleColor.Red;
-            //     Console.WriteLine("❌ Invalid choice. Press any key to try again...");
-            //     Console.ResetColor();
-            //     Console.ReadKey();
-            // }
-
             // Update code to a switch statement
             switch (choice)
             {
