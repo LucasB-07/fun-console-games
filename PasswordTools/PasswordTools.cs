@@ -85,6 +85,7 @@ class PasswordTools
             {
                 case "1":
                     Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nSending you to the Password Generator");
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
