@@ -102,8 +102,11 @@ class PasswordTools
 
                     for ( int k = 0; k < 13; k += 1)
                     {
-                        
+                        Thread.Sleep(200);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(".");
                     }
+
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
