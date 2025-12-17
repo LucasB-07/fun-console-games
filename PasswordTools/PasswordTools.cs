@@ -116,6 +116,7 @@ class PasswordTools
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("❌ Invalid choice. Press any key to try again...");
+                    Console.ResetColor();
 
             }
         }
