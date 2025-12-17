@@ -81,6 +81,10 @@ class PasswordTools
             // }
 
             // Update code to a switch statement
+            switch (choice)
+            {
+                
+            }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
     }
