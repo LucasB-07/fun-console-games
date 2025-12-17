@@ -110,7 +110,8 @@ class PasswordTools
                     RunPasswordChecker();
                     break;
                 case "3":
-                    
+                    Console.WriteLine("Exiting Password Tools. Goodbye!");
+
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
