@@ -84,7 +84,7 @@ class PasswordTools
             switch (choice)
             {
                 case "1":
-                    
+                    Console.ForegroundColor = ConsoleColor.Yellow;
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
