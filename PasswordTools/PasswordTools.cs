@@ -106,7 +106,7 @@ class PasswordTools
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write(".");
                     }
-
+                    Console.ResetColor();
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
