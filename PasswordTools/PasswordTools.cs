@@ -96,6 +96,8 @@ class PasswordTools
                     Console.ResetColor();
                     RunPasswordGenerator();
                     break;
+                case "2":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
