@@ -39,7 +39,6 @@ class PasswordTools
             string choice = Console.ReadLine().Trim();
             System.Console.WriteLine();
 
-            // Update code to a switch statement
             switch (choice)
             {
                 case "1":
