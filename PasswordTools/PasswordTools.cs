@@ -107,6 +107,8 @@ class PasswordTools
                         Console.Write(".");
                     }
                     Console.ResetColor();
+                    RunPasswordChecker();
+                    break;
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
