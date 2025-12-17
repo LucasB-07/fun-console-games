@@ -98,6 +98,7 @@ class PasswordTools
                     break;
                 case "2":
                     Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nSending you to the Password Checker");
             }
         }
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
