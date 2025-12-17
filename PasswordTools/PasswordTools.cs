@@ -182,7 +182,7 @@ class PasswordTools
         Console.Title = "Password Checker";
 
         Thread.Sleep(1000);
-        Console.WriteLine("Welcome to the Password Checker! Below is some information: ");
+        Console.WriteLine("\rWelcome to the Password Checker! Below is some information: ");
         Thread.Sleep(1000);
         Console.WriteLine("This application checks the strength of your password based on various criteria.");
         Thread.Sleep(1000);
