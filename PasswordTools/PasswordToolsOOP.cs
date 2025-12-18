@@ -13,5 +13,8 @@ using System.Security.Cryptography;
 
 enum MenuOption
 {
-    
+    PasswordGenerator = 1,
+    Passwordchecker = 2,
+    Exit = 3,
 }
+
