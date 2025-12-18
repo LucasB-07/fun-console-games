@@ -11,3 +11,7 @@ using System.Threading;
 using System.Globalization;
 using System.Security.Cryptography;
 
+enum MenuOption
+{
+    
+}
