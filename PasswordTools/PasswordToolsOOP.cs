@@ -33,5 +33,8 @@ class PasswordGeneratorTool : PasswordTool
 
 class PasswordCheckerTool : PasswordTool
 {
-    
+    public override void Run()
+    {
+        PasswordChecker.RunPasswordChecker();
+    }
 }
