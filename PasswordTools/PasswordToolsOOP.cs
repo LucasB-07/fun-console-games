@@ -97,6 +97,7 @@ class PasswordTools
                     Console.ResetColor();
                     tool = new PasswordCheckerTool();
                     break;
+                case "3":
             }
         }
     }
