@@ -25,5 +25,8 @@ abstract class PasswordTool
 
 class PasswordGeneratorTool : PasswordTool
 {
-    
+    public override void Run()
+    {
+        PasswordGenerator.RunPasswordGenerator();
+    }
 }
