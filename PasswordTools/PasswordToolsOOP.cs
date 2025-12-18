@@ -88,7 +88,10 @@ class PasswordTools
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("\nSending you to the Password Checker:");
 
-                    
+                    for ( int k = 0; k < 13; k += 1)
+                    {
+                        
+                    }
             }
         }
     }
