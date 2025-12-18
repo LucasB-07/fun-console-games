@@ -102,6 +102,10 @@ class PasswordTools
                     Thread.Sleep(700);
                     return;
                 default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid choice. Please enter a number between 1 and 3.");
+                    Console.ResetColor();
+                    continue;
             }
         }
     }
