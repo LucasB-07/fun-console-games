@@ -18,3 +18,7 @@ enum MenuOption
     Exit = 3,
 }
 
+abstract class PasswordTool
+{
+    
+}
