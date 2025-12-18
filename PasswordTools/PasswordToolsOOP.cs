@@ -84,6 +84,7 @@ class PasswordTools
                     Console.ResetColor();
                     tool = new PasswordGeneratorTool();
                     break;
+                case "2":
             }
         }
     }
