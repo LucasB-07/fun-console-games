@@ -48,6 +48,9 @@ class PasswordTools
 
         Console.Title = "Password Tools";
 
-        
+        while (true)
+        {
+            
+        }
     }
 }
