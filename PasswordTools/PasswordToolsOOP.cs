@@ -20,5 +20,5 @@ enum MenuOption
 
 abstract class PasswordTool
 {
-    
+    public abstract void Run();
 }
