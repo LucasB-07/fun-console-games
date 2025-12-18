@@ -85,6 +85,10 @@ class PasswordTools
                     tool = new PasswordGeneratorTool();
                     break;
                 case "2":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nSending you to the Password Checker:");
+
+                    
             }
         }
     }
