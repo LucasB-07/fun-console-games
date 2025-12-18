@@ -107,6 +107,7 @@ class PasswordTools
                     Console.ResetColor();
                     continue;
             }
+            tool.Run();
         }
     }
 }
