@@ -98,6 +98,9 @@ class PasswordTools
                     tool = new PasswordCheckerTool();
                     break;
                 case "3":
+                    Console.WriteLine("Exiting the application. Goodbye!");
+                    Thread.Sleep(700);
+                    return;
             }
         }
     }
