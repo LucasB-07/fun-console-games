@@ -68,7 +68,11 @@ class PasswordTools
             System.Console.WriteLine();
 
             PasswordTool tool = null;
-            
+
+            switch (choice)
+            {
+                
+            }
         }
     }
 }
