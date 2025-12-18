@@ -101,6 +101,7 @@ class PasswordTools
                     Console.WriteLine("Exiting the application. Goodbye!");
                     Thread.Sleep(700);
                     return;
+                default:
             }
         }
     }
