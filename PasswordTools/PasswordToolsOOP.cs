@@ -74,6 +74,11 @@ class PasswordTools
                 case "1":
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("\nSending you to the Password Generator:");
+
+                    for ( int j = 0; j < 3; j += 1)
+                    {
+                        
+                    }
             }
         }
     }
