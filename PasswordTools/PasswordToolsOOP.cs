@@ -22,3 +22,8 @@ abstract class PasswordTool
 {
     public abstract void Run();
 }
+
+class PasswordGeneratorTool : PasswordTool
+{
+    
+}
