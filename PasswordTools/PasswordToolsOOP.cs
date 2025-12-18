@@ -45,5 +45,9 @@ class PasswordTools
     {
         Console.OutputEncoding = Encoding.UTF8;
         CultureInfo.CurrentCulture = new CultureInfo("en-US");
+
+        Console.Title = "Password Tools";
+
+        
     }
 }
