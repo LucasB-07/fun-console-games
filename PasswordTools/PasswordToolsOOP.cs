@@ -71,7 +71,9 @@ class PasswordTools
 
             switch (choice)
             {
-                
+                case "1":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("\nSending you to the Password Generator:");
             }
         }
     }
