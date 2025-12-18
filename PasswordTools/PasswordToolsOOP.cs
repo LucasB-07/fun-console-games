@@ -67,6 +67,7 @@ class PasswordTools
             string choice = Console.ReadLine().Trim();
             System.Console.WriteLine();
 
+            PasswordTool tool = null;
             
         }
     }
