@@ -63,6 +63,11 @@ class PasswordTools
             Thread.Sleep(500);
             Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
+            Console.Write("Enter your choice (1-3): ");
+            string choice = Console.ReadLine().Trim();
+            System.Console.WriteLine();
+
+            
         }
     }
 }
