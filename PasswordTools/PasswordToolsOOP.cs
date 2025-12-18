@@ -30,3 +30,8 @@ class PasswordGeneratorTool : PasswordTool
         PasswordGenerator.RunPasswordGenerator();
     }
 }
+
+class PasswordCheckerTool : PasswordTool
+{
+    
+}
