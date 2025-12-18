@@ -38,3 +38,8 @@ class PasswordCheckerTool : PasswordTool
         PasswordChecker.RunPasswordChecker();
     }
 }
+
+class PasswordTools
+{
+    
+}
