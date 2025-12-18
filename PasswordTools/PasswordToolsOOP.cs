@@ -41,5 +41,9 @@ class PasswordCheckerTool : PasswordTool
 
 class PasswordTools
 {
-    
+    static void Main()
+    {
+        Console.OutputEncoding = Encoding.UTF8;
+        CultureInfo.CurrentCulture = new CultureInfo("en-US");
+    }
 }
