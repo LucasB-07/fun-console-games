@@ -233,7 +233,10 @@ static class PasswordChecker
         bool checkAgain = true;
         while (checkAgain)
         {
-            
+            Console.Write("Enter a password to check its strength:");
+            string password = PasswordUtils.ReadPassword();
+
+            //
         }
     }
 }
