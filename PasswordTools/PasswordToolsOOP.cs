@@ -246,6 +246,11 @@ static class PasswordChecker
 
             int score = 0;
             string feedback = "";
+
+            if (password.Length >= 16)
+            {
+                
+            }
         }
     }
 }
