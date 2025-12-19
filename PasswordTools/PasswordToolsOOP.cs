@@ -132,7 +132,9 @@ static class PasswordGenerator
         bool genereateAgain = true;
         while (generateAgain)
         {
-            
+            Console.Write("How long do you want your Password to be?: ");
+
+            int length;
         }
     }
 }
