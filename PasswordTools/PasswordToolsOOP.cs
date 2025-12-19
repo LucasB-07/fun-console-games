@@ -176,6 +176,7 @@ static class PasswordGenerator
                 Thread.Sleep(200);
                 Console.Write(".");
             }
+            Console.ResetColor();
         }
     }
 }
