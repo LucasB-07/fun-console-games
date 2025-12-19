@@ -238,7 +238,10 @@ static class PasswordChecker
 
             if (string.IsNullOrWhiteSpace(password))
             {
-                
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("❌ | Password cannot be empty. Please try again.\n");
+                Console.ResetColor();
+                continue;
             }
         }
     }
