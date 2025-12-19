@@ -230,5 +230,7 @@ static class PasswordChecker
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - >");
         
+        bool checkAgain = true;
+        
     }
 }
