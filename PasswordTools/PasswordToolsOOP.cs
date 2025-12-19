@@ -177,6 +177,11 @@ static class PasswordGenerator
                 Console.Write(".");
             }
             Console.ResetColor();
+
+            while (true)
+            {
+                
+            }
         }
     }
 }
