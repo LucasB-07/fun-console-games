@@ -114,5 +114,8 @@ class PasswordTools
 
 static class PasswordGenerator
 {
-    
+    public static void RanPasswordGenerator()
+    {
+        
+    }
 }
