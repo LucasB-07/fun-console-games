@@ -135,6 +135,10 @@ static class PasswordGenerator
             Console.Write("How long do you want your Password to be?: ");
 
             int length;
+            while(!int.TryParse(Console.ReadLine(), out length) || length <= 0)
+            {
+                
+            }
         }
     }
 }
