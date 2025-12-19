@@ -231,6 +231,9 @@ static class PasswordChecker
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - >");
         
         bool checkAgain = true;
-        
+        while (checkAgain)
+        {
+            
+        }
     }
 }
