@@ -178,7 +178,10 @@ static class PasswordGenerator
             }
             Console.ResetColor();
 
-
+            Console.Write($"\r🔐 | Generated Password: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(passwordBuilder.ToString());
+            Console.ResetColor();
 
             while (true)
             {
