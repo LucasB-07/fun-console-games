@@ -193,6 +193,10 @@ static class PasswordGenerator
                     genereateAgain = false;
                     break;
                 }
+                else
+                {
+                    
+                }
             }
         }
     }
