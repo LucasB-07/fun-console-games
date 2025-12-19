@@ -190,7 +190,8 @@ static class PasswordGenerator
                 }
                 else if (answer == "no" || answer == "n")
                 {
-                    
+                    genereateAgain = false;
+                    break;
                 }
             }
         }
