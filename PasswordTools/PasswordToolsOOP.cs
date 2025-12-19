@@ -141,6 +141,11 @@ static class PasswordGenerator
                 Console.Write("❌ | Invalid input. Please enter a positive number: ");
                 Console.ResetColor();
             }
+
+            Console.Write("Do you want to include special characters? (yes/no): ");
+            string includeSpecialCharsInput = Console.ReadLine().Trim().ToLower();
+
+            
         }
     }
 }
