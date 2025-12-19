@@ -236,7 +236,10 @@ static class PasswordChecker
             Console.Write("Enter a password to check its strength:");
             string password = PasswordUtils.ReadPassword();
 
-            //
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                
+            }
         }
     }
 }
