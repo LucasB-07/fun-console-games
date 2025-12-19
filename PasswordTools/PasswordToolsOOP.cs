@@ -171,7 +171,10 @@ static class PasswordGenerator
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"\n✅ | Password is generating");
-            
+            for (int j = 0; j < 13; j += 1)
+            {
+                
+            }
         }
     }
 }
