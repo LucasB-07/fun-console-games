@@ -168,6 +168,10 @@ static class PasswordGenerator
                 int index = RandomNumberGenerator.GetInt32(chars.Length);
                 passwordBuilder.Append(chars[index]);
             }
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\n✅ | Password is generating");
+            
         }
     }
 }
