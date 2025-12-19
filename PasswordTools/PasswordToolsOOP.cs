@@ -217,6 +217,9 @@ static class PasswordChecker
 {
     public static void RunPasswordChecker()
     {
-        
+        Console.Title = "Password Checker";
+
+
+
     }
 }
