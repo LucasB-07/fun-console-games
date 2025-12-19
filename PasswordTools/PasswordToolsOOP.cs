@@ -190,12 +190,12 @@ static class PasswordGenerator
 
                 if (answer == "yes" || answer == "y")
                 {
-                    genereateAgain = true;
+                    generateAgain = true;
                     break;
                 }
                 else if (answer == "no" || answer == "n")
                 {
-                    genereateAgain = false;
+                    generateAgain = false;
                     break;
                 }
                 else
