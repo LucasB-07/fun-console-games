@@ -163,6 +163,10 @@ static class PasswordGenerator
             }
 
             StringBuilder passwordBuilder = new StringBuilder(length);
+            for (int i = 0; i < length; i += 1)
+            {
+                
+            }
         }
     }
 }
