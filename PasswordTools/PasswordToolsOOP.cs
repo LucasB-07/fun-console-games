@@ -137,7 +137,9 @@ static class PasswordGenerator
             int length;
             while(!int.TryParse(Console.ReadLine(), out length) || length <= 0)
             {
-                
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("❌ | Invalid input. Please enter a positive number: ");
+                Console.ResetColor();
             }
         }
     }
