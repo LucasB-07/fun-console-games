@@ -182,6 +182,11 @@ static class PasswordGenerator
             {
                 Console.Write("\nDo you want to generate another password? (yes/no):");
                 var answer = Console.ReadLine().Trim().ToLower();
+
+                if (answer == "yes" || answer == "y")
+                {
+                    
+                }
             }
         }
     }
