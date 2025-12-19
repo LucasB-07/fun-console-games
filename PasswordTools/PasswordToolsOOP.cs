@@ -173,7 +173,8 @@ static class PasswordGenerator
             Console.WriteLine($"\n✅ | Password is generating");
             for (int j = 0; j < 13; j += 1)
             {
-                
+                Thread.Sleep(200);
+                Console.Write(".");
             }
         }
     }
