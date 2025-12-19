@@ -148,6 +148,7 @@ static class PasswordGenerator
             string chars;
             if (includeSpecialChars == "yes" || includeSpecialChars == "y")
             {
+                chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?";
             }
         }
     }
