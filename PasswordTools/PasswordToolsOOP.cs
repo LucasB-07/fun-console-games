@@ -116,6 +116,6 @@ static class PasswordGenerator
 {
     public static void RanPasswordGenerator()
     {
-        
+        Console.Title = "Password Generator";
     }
 }
