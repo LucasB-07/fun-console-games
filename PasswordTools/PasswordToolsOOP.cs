@@ -129,5 +129,6 @@ static class PasswordGenerator
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
+        bool genereateAgain = true;
     }
 }
