@@ -201,5 +201,9 @@ static class PasswordGenerator
                 }
             }
         }
+        Console.WriteLine("Thank you for using the Password Generator! Goodbye!");
+        Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
+        Console.WriteLine("Press any key to return to the main menu...");
+        Console.ReadKey();
     }
 }
