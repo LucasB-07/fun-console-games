@@ -212,3 +212,8 @@ static class PasswordGenerator
         Console.ReadKey();
     }
 }
+
+static class PasswordChecker
+{
+    
+}
