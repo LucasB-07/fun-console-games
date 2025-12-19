@@ -188,6 +188,10 @@ static class PasswordGenerator
                     genereateAgain = true;
                     break;
                 }
+                else if (answer == "no" || answer == "n")
+                {
+                    
+                }
             }
         }
     }
