@@ -129,7 +129,7 @@ static class PasswordGenerator
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
-        bool genereateAgain = true;
+        bool generateAgain = true;
         while (generateAgain)
         {
             Console.Write("How long do you want your Password to be?: ");
@@ -177,6 +177,8 @@ static class PasswordGenerator
                 Console.Write(".");
             }
             Console.ResetColor();
+
+
 
             while (true)
             {
