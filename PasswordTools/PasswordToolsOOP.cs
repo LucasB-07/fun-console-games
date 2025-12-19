@@ -249,8 +249,10 @@ static class PasswordChecker
 
             if (password.Length >= 16)
             {
-                
+                score += 30;
+                feedback += "✅ | Contains excellent length (16+ characters).\n";
             }
+
         }
     }
 }
