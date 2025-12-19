@@ -215,5 +215,8 @@ static class PasswordGenerator
 
 static class PasswordChecker
 {
-    
+    public static void RunPasswordChecker()
+    {
+        
+    }
 }
