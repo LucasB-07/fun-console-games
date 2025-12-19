@@ -130,5 +130,9 @@ static class PasswordGenerator
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - - - - >");
 
         bool genereateAgain = true;
+        while (generateAgain)
+        {
+            
+        }
     }
 }
