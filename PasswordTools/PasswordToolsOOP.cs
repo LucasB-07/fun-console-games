@@ -219,7 +219,16 @@ static class PasswordChecker
     {
         Console.Title = "Password Checker";
 
-
-
+        Thread.Sleep(1000);
+        Console.WriteLine("\rWelcome to the Password Checker! Below is some information: ");
+        Thread.Sleep(1000);
+        Console.WriteLine("This application checks the strength of your password based on various criteria.");
+        Thread.Sleep(1000);
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("This project is intended solely for educational and developmental purposes. It is not designed or suitable for real-world, production, operational or security-critical use. The author accepts no responsibility or liability for any consequences arising from misuse. MUST NOT BE USED IN PRODUCTION OR SECURITY-CRITICAL SYSTEMS.");
+        Console.ResetColor();
+        Thread.Sleep(1000);
+        Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - >");
+        
     }
 }
