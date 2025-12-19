@@ -143,9 +143,12 @@ static class PasswordGenerator
             }
 
             Console.Write("Do you want to include special characters? (yes/no): ");
-            string includeSpecialCharsInput = Console.ReadLine().Trim().ToLower();
+            string includeSpecialChars = Console.ReadLine().Trim().ToLower();
 
             string chars;
+            if (includeSpecialChars == "yes" || includeSpecialChars == "y")
+            {
+            }
         }
     }
 }
