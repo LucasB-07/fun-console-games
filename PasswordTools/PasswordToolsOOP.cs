@@ -161,6 +161,8 @@ static class PasswordGenerator
                 Console.ResetColor();
                 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             }
+
+            StringBuilder passwordBuilder = new StringBuilder(length);
         }
     }
 }
