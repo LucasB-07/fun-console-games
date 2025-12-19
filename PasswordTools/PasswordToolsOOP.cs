@@ -185,7 +185,8 @@ static class PasswordGenerator
 
                 if (answer == "yes" || answer == "y")
                 {
-                    
+                    genereateAgain = true;
+                    break;
                 }
             }
         }
