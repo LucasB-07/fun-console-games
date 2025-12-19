@@ -154,7 +154,10 @@ static class PasswordGenerator
             {
                 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             }
-
+            else
+            {
+                
+            }
         }
     }
 }
