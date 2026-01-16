@@ -426,11 +426,17 @@ static class PasswordUtils
             {
                 break;
             }
-            else if (key.Key == ConsoleKey.Backspace && password.Length > 0)
+            if (key.Key == ConsoleKey.Backspace && password.Length > 0)
             {
                 password.Length -= 1;
                 Console.Write("\b \b");
             }
+            else if (!char.IsControl(key.KeyChar))
+            {
+                password.Append(key.KeyChar);
+                Console.Write("*");
+            }
         }
+        
     }
 }
