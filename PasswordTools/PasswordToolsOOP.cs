@@ -414,3 +414,7 @@ static class PasswordChecker
     }
 }
 
+static class PasswordUtils
+{
+    
+}
