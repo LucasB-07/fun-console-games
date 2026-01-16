@@ -234,11 +234,12 @@ static class PasswordChecker
         Console.ResetColor();
         Thread.Sleep(1000);
         Console.WriteLine("< - - - - - - - - - - - - - - - - - - - - - - - - - - >");
-        
+
         bool checkAgain = true;
         while (checkAgain)
         {
-            Console.Write("Enter a password to check its strength:");
+            Console.Write("Enter a password to check its strength: ");
+            //string password = ReadPassword();
             string password = PasswordUtils.ReadPassword();
 
             if (string.IsNullOrWhiteSpace(password))
@@ -248,10 +249,10 @@ static class PasswordChecker
                 Console.ResetColor();
                 continue;
             }
-
             int score = 0;
             string feedback = "";
 
+            //1. Length
             if (password.Length >= 16)
             {
                 score += 30;
