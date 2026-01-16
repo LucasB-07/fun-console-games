@@ -14,7 +14,7 @@ using System.Security.Cryptography;
 enum MenuOption
 {
     PasswordGenerator = 1,
-    Passwordchecker = 2,
+    PasswordChecker = 2,
     Exit = 3,
 }
 
@@ -73,38 +73,45 @@ class PasswordTools
             {
                 case "1":
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("\nSending you to the Password Generator:");
+                    Console.WriteLine("\nSending you to the Password Generator");
 
-                    for ( int j = 0; j < 3; j += 1)
+                    for (int j = 0; j < 13; j += 1)
                     {
                         Thread.Sleep(200);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write(".");
                     }
                     Console.ResetColor();
+                    //RunPasswordGenerator();
                     tool = new PasswordGeneratorTool();
                     break;
+
                 case "2":
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("\nSending you to the Password Checker:");
+                    Console.WriteLine("\nSending you to the Password Checker");
 
-                    for ( int k = 0; k < 13; k += 1)
+                    for (int k = 0; k < 13; k += 1)
                     {
                         Thread.Sleep(200);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write(".");
                     }
                     Console.ResetColor();
+                    //RunPasswordChecker();
                     tool = new PasswordCheckerTool();
                     break;
+
                 case "3":
-                    Console.WriteLine("Exiting the application. Goodbye!");
+                    Console.WriteLine("Exiting Password Tools. Goodbye!");
                     Thread.Sleep(700);
                     return;
+
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalid choice. Please enter a number between 1 and 3.");
+                    Console.WriteLine("❌ Invalid choice. Press any key to try again...");
                     Console.ResetColor();
+                    Console.ReadKey();
+                    //break;
                     continue;
             }
             tool.Run();
@@ -260,3 +267,4 @@ static class PasswordChecker
         }
     }
 }
+
