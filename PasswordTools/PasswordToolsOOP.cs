@@ -289,6 +289,9 @@ static class PasswordChecker
             {
                 feedback += "❌ | No uppercase letters. Consider adding some.\n";
             }
+
+            //3. Lowercase Letters
+            
         }
     }
 }
