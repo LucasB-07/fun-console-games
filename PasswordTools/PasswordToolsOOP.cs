@@ -357,10 +357,15 @@ static class PasswordChecker
             }
             else if (score >= 75)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("STRONG");
             }
-            
+            else if (score >= 60)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("MEDIUM");
+            }
+
         }
     }
 }
