@@ -316,6 +316,10 @@ static class PasswordChecker
                 score += 15;
                 feedback += "✅ | Contains digit.\n";
             }
+            else
+            {
+                feedback += "❌ | No digits. Consider adding some.\n";
+            }
 
             //5. Special Characters
             if (Regex.IsMatch(password, @"(?:[\W_].*){2,}"))
