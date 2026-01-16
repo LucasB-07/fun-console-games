@@ -418,6 +418,6 @@ static class PasswordUtils
 {
     public static string ReadPassword()
     {
-        
+        var password = new StringBuilder();
     }
 }
