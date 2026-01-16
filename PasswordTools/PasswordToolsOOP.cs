@@ -343,6 +343,10 @@ static class PasswordChecker
                 score -= 20;
                 feedback += "❌ | Contains common patterns. Avoid using easily guessable sequences.\n";
             }
+
+            score = Math.Clamp(score, 0, 100);
+
+            
         }
     }
 }
