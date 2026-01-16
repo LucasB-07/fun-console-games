@@ -350,7 +350,11 @@ static class PasswordChecker
             Console.WriteLine("\n" + new string('=', 60));
             Console.WriteLine($"Password Strength: ");
 
-            
+            if (score >= 90)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("VERY STRONG");
+            }
         }
     }
 }
