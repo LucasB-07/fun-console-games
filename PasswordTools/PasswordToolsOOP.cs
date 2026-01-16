@@ -338,6 +338,11 @@ static class PasswordChecker
             }
 
             //Common Patterns
+            if (Regex.IsMatch(password, @"(123456|password|qwerty|letmein|welcome|admin|iloveyou|token|secret|wasd|abc123|111111|password123|lol|lol123|admin123|zxcvbn)", RegexOptions.IgnoreCase))
+            {
+                score -= 20;
+                feedback += "❌ | Contains common patterns. Avoid using easily guessable sequences.\n";
+            }
         }
     }
 }
