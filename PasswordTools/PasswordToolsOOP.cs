@@ -312,7 +312,11 @@ static class PasswordChecker
                 score += 20;
                 feedback += "✅ | Contains multiple special characters.\n";
             }
-            
+            else if (Regex.IsMatch(password, @"[\W_]"))
+            {
+                score += 15;
+                feedback += "✅ | Contains special character.\n";
+            }
         }
     }
 }
