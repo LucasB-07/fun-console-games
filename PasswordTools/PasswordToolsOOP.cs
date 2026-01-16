@@ -280,6 +280,11 @@ static class PasswordChecker
                 score += 20;
                 feedback += "✅ | Contains multiple uppercase letters.\n";
             }
+            else if (Regex.IsMatch(password, @"[A-Z]"))
+            {
+                score += 15;
+                feedback += "✅ | Contains uppercase letter.\n";
+            }
         }
     }
 }
