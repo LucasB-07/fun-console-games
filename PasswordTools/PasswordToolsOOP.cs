@@ -305,8 +305,9 @@ static class PasswordChecker
             {
                 feedback += "❌ | No lowercase letters. Consider adding some.\n";
             }
+            //5. Digits
 
-            //4. Special Characters
+            //5. Special Characters
             if (Regex.IsMatch(password, @"(?:[\W_].*){2,}"))
             {
                 score += 20;
@@ -321,8 +322,6 @@ static class PasswordChecker
             {
                 feedback += "❌ | No special characters. Consider adding some.\n";
             }
-
-            //5. Digits
         }
     }
 }
