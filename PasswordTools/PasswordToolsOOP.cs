@@ -383,6 +383,14 @@ static class PasswordChecker
                 Console.WriteLine($"\nFeedback; \n{feedback.Trim()}");
             }
             Console.WriteLine(new string('=', 60) + "\n");
+
+            while (true)
+            {
+                Console.Write("Do you want to check another password? (yes/no): ");
+                var answer = Console.ReadLine().ToLower().Trim();
+
+                
+            }
         }
     }
 }
