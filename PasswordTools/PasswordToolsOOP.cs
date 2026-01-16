@@ -285,6 +285,10 @@ static class PasswordChecker
                 score += 15;
                 feedback += "✅ | Contains uppercase letter.\n";
             }
+            else
+            {
+                feedback += "❌ | No uppercase letters. Consider adding some.\n";
+            }
         }
     }
 }
