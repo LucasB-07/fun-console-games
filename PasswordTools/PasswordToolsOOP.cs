@@ -437,6 +437,7 @@ static class PasswordUtils
                 Console.Write("*");
             }
         }
-        
+        Console.WriteLine();
+        return password.ToString();
     }
 }
