@@ -365,6 +365,11 @@ static class PasswordChecker
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("MEDIUM");
             }
+            else if (score >= 40)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("WEAK");
+            }
 
         }
     }
