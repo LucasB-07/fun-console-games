@@ -377,6 +377,7 @@ static class PasswordChecker
             }
             Console.ResetColor();
 
+            Console.WriteLine($"Score: {score}/100");
         }
     }
 }
