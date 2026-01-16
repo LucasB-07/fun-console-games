@@ -140,9 +140,8 @@ static class PasswordGenerator
         while (generateAgain)
         {
             Console.Write("How long do you want your Password to be?: ");
-
             int length;
-            while(!int.TryParse(Console.ReadLine(), out length) || length <= 0)
+            while (!int.TryParse(Console.ReadLine(), out length) || length <= 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write("❌ | Invalid input. Please enter a positive number: ");
@@ -155,9 +154,9 @@ static class PasswordGenerator
             string chars;
             if (includeSpecialChars == "yes" || includeSpecialChars == "y")
             {
-                chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?";
+                chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
             }
-            else if (includeSpecialChars == "no" || includeSpecialChars == "n" )
+            else if (includeSpecialChars == "no" || includeSpecialChars == "n")
             {
                 chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             }
@@ -177,10 +176,10 @@ static class PasswordGenerator
             }
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"\n✅ | Password is generating");
+            Console.WriteLine("\n✅ | Password is generating");
             for (int j = 0; j < 13; j += 1)
             {
-                Thread.Sleep(200);
+                Thread.Sleep(500);
                 Console.Write(".");
             }
             Console.ResetColor();
@@ -192,9 +191,8 @@ static class PasswordGenerator
 
             while (true)
             {
-                Console.Write("\nDo you want to generate another password? (yes/no):");
-                var answer = Console.ReadLine().Trim().ToLower();
-
+                Console.Write("\nDo you want to generate another password? (yes/no): ");
+                var answer = Console.ReadLine().ToLower().Trim();
                 if (answer == "yes" || answer == "y")
                 {
                     generateAgain = true;
@@ -213,7 +211,7 @@ static class PasswordGenerator
                 }
             }
         }
-        Console.WriteLine("Thank you for using the Password Generator! Goodbye!");
+        Console.WriteLine("Thank you for using the Password Generator!");
         Console.WriteLine("❤️ Made With Love By LucasB-07 ❤️\n");
         Console.WriteLine("Press any key to return to the main menu...");
         Console.ReadKey();
