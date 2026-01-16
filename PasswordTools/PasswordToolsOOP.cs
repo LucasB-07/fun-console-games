@@ -416,5 +416,8 @@ static class PasswordChecker
 
 static class PasswordUtils
 {
-    
+    public static string ReadPassword()
+    {
+        
+    }
 }
