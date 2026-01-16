@@ -336,6 +336,8 @@ static class PasswordChecker
             {
                 feedback += "❌ | No special characters. Consider adding some.\n";
             }
+
+            //Common Patterns
         }
     }
 }
