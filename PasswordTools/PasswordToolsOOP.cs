@@ -273,6 +273,8 @@ static class PasswordChecker
                 score += 5;
                 feedback += "Contains poor length ( <8 characters). Use a longer password.\n";
             }
+
+            //2. Uppercase Letters
         }
     }
 }
