@@ -307,6 +307,12 @@ static class PasswordChecker
             }
 
             //4. Digits
+            if (Regex.IsMatch(password, @"(?:[\W_].*){2,}"))
+            {
+                score += 20;
+                feedback += "✅ | Contains multiple special characters.\n";
+            }
+            
         }
     }
 }
