@@ -426,6 +426,11 @@ static class PasswordUtils
             {
                 break;
             }
+            else if (key.Key == ConsoleKey.Backspace && password.Length > 0)
+            {
+                password.Length -= 1;
+                Console.Write("\b \b");
+            }
         }
     }
 }
