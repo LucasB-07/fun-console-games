@@ -301,6 +301,10 @@ static class PasswordChecker
                 score += 15;
                 feedback += "✅ | Contains lowercase letter.\n";
             }
+            else
+            {
+                feedback += "❌ | No lowercase letters. Consider adding some.\n";
+            }
         }
     }
 }
