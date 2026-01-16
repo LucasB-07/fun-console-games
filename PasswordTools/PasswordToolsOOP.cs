@@ -296,6 +296,11 @@ static class PasswordChecker
                 score += 20;
                 feedback += "✅ | Contains multiple lowercase letters.\n";
             }
+            else if (Regex.IsMatch(password, @"[a-z]"))
+            {
+                score += 15;
+                feedback += "✅ | Contains lowercase letter.\n";
+            }
         }
     }
 }
