@@ -421,7 +421,11 @@ static class PasswordUtils
         var password = new StringBuilder();
         while (true)
         {
-            
+            var key = Console.ReadKey(true);
+            if (key.Key == ConsoleKey.Enter)
+            {
+                break;
+            }
         }
     }
 }
